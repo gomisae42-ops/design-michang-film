@@ -218,6 +218,33 @@ figcaption {
   text-decoration: none;
   white-space: nowrap;
 }
+.film-nav > a:not(.film-nav-cta) {
+  position: relative;
+  isolation: isolate;
+  transition: color 180ms ease;
+}
+.film-nav > a:not(.film-nav-cta)::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 4px -12px;
+  background: #f06a4d;
+  border-radius: 1px;
+  opacity: 0;
+  transform: scaleX(0.82);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+.film-nav > a:not(.film-nav-cta):hover,
+.film-nav > a:not(.film-nav-cta):focus-visible {
+  color: #fffaf3;
+}
+.film-nav > a:not(.film-nav-cta):hover::before,
+.film-nav > a:not(.film-nav-cta):focus-visible::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
 .film-nav > a[aria-current='page']:not(.film-nav-cta) {
   text-decoration: underline;
   text-underline-offset: 8px;
@@ -1159,6 +1186,9 @@ figcaption {
   .film-nav > a {
     padding: 8px 0;
     font-size: 16px;
+  }
+  .film-nav > a:not(.film-nav-cta)::before {
+    display: none;
   }
   .film-nav .film-nav-cta {
     margin-top: 12px;
