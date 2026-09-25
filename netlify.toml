@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  # Required by the Netlify OpenNext adapter when installing with pnpm.
+  PNPM_FLAGS = "--shamefully-hoist"
+
+# Explicitly load OpenNext even when automatic framework detection is missing.
+# Do not pin the adapter in package.json; Netlify manages its current version.
+# The adapter also handles next.config.ts output: 'export' by copying out/.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
