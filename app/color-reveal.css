@@ -1,0 +1,162 @@
+:root {
+  --reveal-pink: #f05a8a;
+  --reveal-aqua: #63d7d1;
+  --reveal-lime: #c7f04b;
+  --reveal-violet: #8b67e8;
+  --reveal-orange: #ff824d;
+  --reveal-gold: #b79a61;
+}
+[data-color-reveal='pink'] {
+  --reveal-color: var(--reveal-pink);
+}
+[data-color-reveal='aqua'] {
+  --reveal-color: var(--reveal-aqua);
+}
+[data-color-reveal='lime'] {
+  --reveal-color: var(--reveal-lime);
+}
+[data-color-reveal='violet'] {
+  --reveal-color: var(--reveal-violet);
+}
+[data-color-reveal='orange'] {
+  --reveal-color: var(--reveal-orange);
+}
+[data-color-reveal='gold'] {
+  --reveal-color: var(--reveal-gold);
+}
+[data-color-reveal='red'] {
+  --reveal-color: var(--michang-red);
+}
+[data-color-reveal='yellow'] {
+  --reveal-color: var(--fresh-yellow);
+}
+[data-color-reveal]:focus-visible {
+  outline: 2px solid #62625f;
+  outline-offset: 5px;
+}
+
+/* Default stays neutral, including the existing image-selection state. */
+html .home-make {
+  background: #f0f0ed;
+}
+html .home-service-visual {
+  background: transparent;
+}
+html .home-services-list a,
+html .home-services-list a.is-active,
+html .home-services-list a:hover,
+html .home-services-list a:focus-visible {
+  background: transparent;
+}
+html .home-make .home-text-link:hover {
+  background: transparent;
+  color: var(--michang-red);
+}
+html .home-services-list .home-index,
+html .home-why-columns .home-index,
+html .home-timeline .home-index {
+  color: #62625f;
+}
+html .home-timeline li::before {
+  background: #94948f;
+}
+html .home-services-list a {
+  border-color: #d5d5d0;
+}
+
+.project-people {
+  color: #242424;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 9px;
+}
+.project-people[data-reveal-active] {
+  color: var(--reveal-pink);
+  text-decoration-color: var(--reveal-pink);
+  transition:
+    color 400ms,
+    text-decoration-color 400ms;
+}
+html .film-project-card .project-title-cover,
+html .film-project-card:hover .project-title-cover {
+  background: #efefec;
+  transition: none;
+}
+html .film-project-card[data-reveal-active] .project-title-cover {
+  background: color-mix(in srgb, var(--reveal-aqua) 18%, #efefec);
+  transition: background-color 500ms;
+}
+html .film-project-card[data-reveal-active] .project-cover-bottom {
+  border-color: var(--reveal-aqua);
+  background-color: var(--reveal-aqua);
+  color: #242424;
+  transition: background-color 500ms;
+}
+html .film-project-card[data-reveal-active] .project-title-cover p span {
+  color: #242424;
+}
+.film-project-card .film-photo {
+  overflow: hidden;
+}
+.film-project-card .film-photo img {
+  transition: transform 500ms;
+}
+.film-project-card[data-reveal-active] .film-photo img {
+  transform: scale(1.02);
+}
+
+/* Color is confined to index markers and thin rules, never whole fluorescent rows. */
+html .home-services-list a[data-reveal-active] {
+  border-top-color: var(--reveal-color);
+}
+html .home-services-list a[data-reveal-active] .home-index,
+html .home-why-columns article[data-reveal-active] .home-index {
+  color: #121212;
+  background-color: var(--reveal-color);
+  transition: background-color 400ms;
+}
+html
+  .home-services-list
+  a[data-color-reveal='red'][data-reveal-active]
+  .home-index {
+  color: #fff;
+}
+html .home-services-list a[data-reveal-active] svg {
+  color: var(--reveal-color);
+  transform: translateX(4px);
+  transition:
+    transform 400ms,
+    color 400ms;
+}
+html .home-why-columns article[data-reveal-active] {
+  border-top-color: var(--reveal-color);
+  transition: border-color 400ms;
+}
+html .home-timeline li[data-reveal-active]::before {
+  background-color: var(--reveal-aqua);
+  transition: background-color 400ms;
+}
+html .film-detail-steps li[data-reveal-active] .row-number {
+  background-color: var(--reveal-aqua);
+  color: #121212;
+  transition: background-color 400ms;
+}
+html #trust-title[data-reveal-active] {
+  text-decoration: underline;
+  text-decoration-color: var(--reveal-gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 12px;
+}
+html #trust-title span {
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html .film-project-card[data-reveal-active] .film-photo img,
+  html .home-services-list a[data-reveal-active] svg {
+    transform: none;
+  }
+  html .home-services-list a[data-reveal-active] svg {
+    transition: color 400ms;
+  }
+}

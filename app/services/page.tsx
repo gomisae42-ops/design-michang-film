@@ -1,0 +1,3 @@
+import { PageIntro, ServiceCards, ContactBand, Process, SectionTitle } from '@/components/site';
+export const metadata={title:'서비스',description:'브랜딩, 동영상, 홈페이지, 기업·제품 카탈로그, 책자·보고서·성과집의 제작 범위를 확인하세요.'};
+export default function Page(){return <><PageIntro label="서비스" title="필요한 표현을, 하나의 방향으로." desc="어떤 매체가 필요하신가요? 목적과 대상에 맞는 디자인과 콘텐츠를 함께 만듭니다."/><section className="section wrap"><ServiceCards/><p className="muted small" style={{marginTop:30}}>이미지는 서비스 이해를 돕기 위한 AI 디자인 예시입니다.</p></section><section className="process-section"><div className="section wrap"><SectionTitle eyebrow="HOW WE WORK" title="각기 다른 매체, 함께 만드는 과정."/><Process/></div></section><ContactBand/></>}
