@@ -247,13 +247,13 @@ export default function ReferenceHome() {
             data-color-reveal="gold"
             data-reveal-mobile
           >
-            1990<span>년부터</span>
+            1997<span>년부터</span>
           </h2>
           <div>
             <h3>
-              <span className="home-trust-small-line">30여 년을 성장해 온</span>
+              <span>30여 년 성장해 온</span>
               <br />
-              <span className="home-heading-second">디자인·인쇄·출판의 경험.</span>
+              <span className="home-heading-second">디자인인쇄 출판의 경험</span>
             </h3>
             <p>
               여러 매체에 이야기를 담아온 기반 위에서
