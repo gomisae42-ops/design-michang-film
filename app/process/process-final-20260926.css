@@ -1,0 +1,85 @@
+/* Final process page correction — 2026-09-26. */
+.process-page {
+  --process-gutter: max(64px, calc((100vw - 1312px) / 2));
+  background: #f8f7f4 !important;
+}
+
+.process-page .film-intro {
+  width: 100% !important;
+  margin-left: 0 !important;
+  background: #f7f3ec !important;
+}
+
+.process-page .film-intro-inner,
+.process-page > .film-wrap.film-section {
+  width: min(1312px, calc(100% - 128px)) !important;
+  margin-inline: auto !important;
+}
+
+.process-page > .film-wrap.film-section { overflow: visible; }
+
+.process-page .film-detail-steps > li,
+.process-page .film-detail-steps > li:hover,
+.process-page .film-detail-steps > li:focus {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: 0 !important;
+  padding-inline: var(--process-gutter) !important;
+}
+
+.process-page .film-detail-steps > li:nth-child(1) { background: #faf9f6 !important; }
+.process-page .film-detail-steps > li:nth-child(2) { background: #f7eff3 !important; }
+.process-page .film-detail-steps > li:nth-child(3) { background: #f1f7f7 !important; }
+.process-page .film-detail-steps > li:nth-child(4) { background: #f4f5f5 !important; }
+.process-page .film-detail-steps > li:nth-child(5) { background: #faf8e9 !important; }
+.process-page .film-detail-steps > li:nth-child(6) { background: #f3f7ee !important; }
+.process-page .film-detail-steps > li:nth-child(7) { background: #f4f5f5 !important; }
+.process-page .film-detail-steps > li:nth-child(8) { background: #f1f7f8 !important; }
+
+.process-page .film-kicker { font-size: 19px !important; }
+.process-page .film-intro h1 {
+  font-size: clamp(46px, calc(4.8vw + 2px), 72px) !important;
+}
+.process-page .film-intro .film-desc {
+  font-size: clamp(22px, calc(1.45vw + 2px), 25px) !important;
+}
+.process-page .film-detail-steps h2 {
+  font-size: clamp(36px, calc(3vw + 4px), 50px) !important;
+}
+.process-page .service-jumps a,
+.process-page .film-detail-steps p,
+.process-page .step-detail [data-slot='accordion-content'],
+.process-page .process-scope-section .scope-note p,
+.process-page .process-scope-section .preparation-list {
+  font-size: 21px !important;
+}
+.process-page .step-detail [data-slot='accordion-trigger'] { font-size: 18px !important; }
+.process-page .step-responsibilities dt { font-size: 19px !important; }
+.process-page .step-responsibilities dd { font-size: 23px !important; }
+.process-page .film-text-link { font-size: 19px !important; }
+
+@media (max-width: 1023px) {
+  .process-page { --process-gutter: 32px; }
+  .process-page .film-intro-inner,
+  .process-page > .film-wrap.film-section {
+    width: calc(100% - 64px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .process-page { --process-gutter: 20px; }
+  .process-page .film-intro-inner,
+  .process-page > .film-wrap.film-section {
+    width: calc(100% - 40px) !important;
+  }
+  .process-page .film-intro h1 {
+    font-size: clamp(38px, calc(9.6vw + 2px), 47px) !important;
+  }
+  .process-page .film-intro .film-desc,
+  .process-page .film-detail-steps p,
+  .process-page .step-detail [data-slot='accordion-content'],
+  .process-page .process-scope-section .scope-note p,
+  .process-page .process-scope-section .preparation-list {
+    font-size: 19px !important;
+  }
+}
