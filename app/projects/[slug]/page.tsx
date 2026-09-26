@@ -42,14 +42,14 @@ export default async function Page({
   }));
   return (
     <>
-      <section className="case-hero">
-        <Image
-          src="/media/home-gunpo/story-rear.webp"
-          alt="군포 소공인 작업 현장의 실제 촬영 장면"
-          fill
-          priority
-          sizes="100vw"
-        />
+      <section
+        className="case-hero"
+        style={{
+          minHeight: 'min(620px, calc(100svh - 80px))',
+          background: '#18212a',
+          alignItems: 'center',
+        }}
+      >
         <div className="film-wrap case-hero-copy">
           <p className="film-kicker">프로젝트 · 소공인 다큐멘터리</p>
           <h1>군포의 작은 손이<br />만드는 큰 이야기</h1>
