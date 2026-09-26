@@ -142,7 +142,6 @@ export function ProjectCard({
       className="film-project-card"
       href={`/projects/${project.slug}/`}
     >
-      <ProjectCover />
       <div className="film-project-caption">
         <span>{project.type}</span>
         {project.year && <span>{project.year}</span>}

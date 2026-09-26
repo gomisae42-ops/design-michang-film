@@ -86,6 +86,23 @@
 .case-next p { font-size: 20px !important; line-height: 1.75; }
 .film-final h2 { font-size: clamp(36px, calc(3.3vw + 4px), 52px) !important; }
 
+/* Tenth correction: archive wording and readable statement scale. */
+.about-archive h3 {
+  font-size: clamp(44px, 4.6vw, 68px) !important;
+  line-height: 1.28 !important;
+}
+.about-archive p {
+  font-size: 36px !important;
+  line-height: 1.65 !important;
+  max-width: 980px;
+}
+
+/* The projects list now uses typography only, without the unrelated machine image. */
+.projects-page .film-project-card {
+  padding: 56px 0;
+  border-top: 1px solid var(--border);
+}
+
 /* Contact intro background requested in a pale warm jade tone. */
 main:has(.film-contact-layout) > .film-intro {
   background: #e7f0e9 !important;

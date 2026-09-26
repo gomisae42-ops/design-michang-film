@@ -59,7 +59,7 @@ export default function Page() {
           ))}
         </ol>
       </section>
-      <FinalCTA source="process" />
+      <FinalCTA source="process" title={'영상프로젝트를\n준비하고 계신가요?'} />
       <section className="film-wrap film-section process-scope-section">
         <section className="scope-note">
           <h2>지금 있는 자료부터 보내주세요.</h2>

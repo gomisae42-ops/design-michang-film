@@ -58,6 +58,48 @@
 .process-page .step-responsibilities dd { font-size: 23px !important; }
 .process-page .film-text-link { font-size: 19px !important; }
 
+/* Tenth correction: cleaner stage navigation and clearer interactions. */
+.process-page .service-jumps {
+  border-block: 0 !important;
+  background: #eee7f2 !important;
+  padding-inline: 24px !important;
+}
+.process-page .step-detail [data-slot='accordion-trigger'] {
+  font-size: 20px !important;
+  text-decoration: none !important;
+  transition: color .25s ease;
+}
+.process-page .step-detail [data-slot='accordion-trigger']:hover,
+.process-page .step-detail [data-slot='accordion-trigger']:focus-visible {
+  color: #73334b !important;
+}
+.process-page .title-line-middle {
+  color: color-mix(in srgb, currentColor 80%, transparent) !important;
+  transition: color .25s ease;
+}
+.process-page .film-intro h1:hover .title-line-middle {
+  color: #d9782d !important;
+}
+.process-page .title-line-complete,
+.process-page .title-line-soft {
+  color: color-mix(in srgb, currentColor 60%, transparent) !important;
+  transition: color .25s ease;
+}
+.process-page .film-intro h1:hover .title-line-complete,
+.process-page .film-intro h1:hover .title-line-soft {
+  color: #793f37 !important;
+}
+.process-page .film-final-title-second {
+  color: color-mix(in srgb, currentColor 80%, transparent) !important;
+}
+.process-page .film-final h2:hover .film-final-title-second {
+  color: #667d9b !important;
+}
+.process-page .preparation-list {
+  list-style-type: disc;
+  padding-left: 1.35em;
+}
+
 @media (max-width: 1023px) {
   .process-page { --process-gutter: 32px; }
   .process-page .film-intro-inner,
