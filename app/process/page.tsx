@@ -10,7 +10,7 @@ export const metadata = filmMetadata(
 );
 export default function Page() {
   return (
-    <>
+    <div className="process-page">
       <FilmIntro
         label="제작과정"
         title={
@@ -81,6 +81,6 @@ export default function Page() {
         </section>
       </section>
       <FinalCTA source="process" />
-    </>
+    </div>
   );
 }

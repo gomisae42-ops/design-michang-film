@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
-import { FilmIntro, ProjectCover, FinalCTA } from '@/components/film';
+import { FinalCTA } from '@/components/film';
 import { VideoPlayer } from '@/components/film-interactions';
 import { CaseNavigation } from '@/components/case-navigation';
 import { filmMetadata, projects } from '@/lib/film-content';
@@ -41,19 +42,23 @@ export default async function Page({
   }));
   return (
     <>
-      <FilmIntro
-        label="프로젝트 · 소공인 다큐멘터리"
-        title={
-          <>
-            군포의 작은 손이
-            <br />
-            만드는 큰 이야기
-          </>
-        }
-        desc={study.intro}
-      />
-      <div className="film-wrap film-section">
-        <ProjectCover />
+      <section className="case-hero">
+        <Image
+          src="/media/home-gunpo/story-rear.webp"
+          alt="군포 소공인 작업 현장의 실제 촬영 장면"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="film-wrap case-hero-copy">
+          <p className="film-kicker">프로젝트 · 소공인 다큐멘터리</p>
+          <h1>군포의 작은 손이<br />만드는 큰 이야기</h1>
+          <p>{study.intro}</p>
+          <span>군포산업진흥원 소공인지원센터 · 군포 · 2026</span>
+        </div>
+      </section>
+      <div className="film-wrap film-section case-document">
+        <p className="film-kicker">Quick facts</p>
         <dl className="film-case-meta">
           {study.facts
             .filter((f) => f.value)
@@ -64,10 +69,7 @@ export default async function Page({
               </div>
             ))}
         </dl>
-        <p className="case-availability">
-          완성 영상과 상세 제작 자료는 공개 가능한 범위를 확인해 순차적으로
-          소개합니다.
-        </p>
+        <p className="case-availability">공개 승인되지 않은 세부 역할·납품 범위·성과 수치는 표시하지 않습니다.</p>
         <div
           className={
             items.length > 1
@@ -79,8 +81,17 @@ export default async function Page({
           <div>
             {sections.map((s) => (
               <section key={s.id} id={s.id} className="film-case-section">
-                <h2>{s.title}</h2>
-                <p>{s.body}</p>
+                <div className="case-section-copy">
+                  <p className="film-kicker">{caseGroupLabels[s.group]}</p>
+                  <h2>{s.title}</h2>
+                  <p>{s.body}</p>
+                </div>
+                {s.image && (
+                  <figure className="case-evidence">
+                    <Image src={s.image.src} alt={s.image.alt} width={1600} height={708} sizes="(max-width: 767px) 100vw, 70vw" />
+                    <figcaption>{s.image.caption}</figcaption>
+                  </figure>
+                )}
                 {s.kind === 'film' && (
                   <VideoPlayer
                     src={project.media.video}

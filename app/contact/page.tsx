@@ -25,6 +25,11 @@ export default function Page() {
       <section className="film-wrap film-section film-contact-layout">
         <aside className="film-contact-info">
           <h2>이야기를 시작해 주세요.</h2>
+          <ol className="contact-steps">
+            <li><span>01</span><strong>문의 내용을 확인합니다.</strong></li>
+            <li><span>02</span><strong>목적과 일정을 함께 정리합니다.</strong></li>
+            <li><span>03</span><strong>필요한 제작 범위를 제안합니다.</strong></li>
+          </ol>
           <a href={company.tel}>
             <Phone size={20} aria-hidden="true" />
             {company.phone}
@@ -33,7 +38,7 @@ export default function Page() {
             <Mail size={20} aria-hidden="true" />
             {company.email}
           </a>
-          <p>사업 소개 자료나 참고 영상이 있다면 이메일에 함께 보내주세요.</p>
+          <p>과업지시서·사업계획서·참고 영상이 있다면 이메일에 함께 보내주세요.</p>
           <p>
             온라인 접수는 준비 중입니다.
             <br />

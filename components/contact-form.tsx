@@ -71,10 +71,12 @@ export default function ContactForm({
       `제작 영상: ${options.find((o) => o.id === service)?.name || '상담 후 결정'}`,
       ...[
         ['기관/회사명', 'organization'],
+        ['기관 유형', 'organizationType'],
         ['담당자명', 'name'],
         ['이메일', 'email'],
         ['연락처', 'phone'],
         ['사업/프로젝트명', 'projectName'],
+        ['사업 단계', 'projectStage'],
         ['예상 일정', 'deadline'],
         ['예상 예산', 'budget'],
         ['참고 링크', 'referenceUrl'],
@@ -233,6 +235,26 @@ export default function ContactForm({
               </SelectContent>
             </Select>
           </div>
+          <div className="field">
+            <label htmlFor="organizationType">기관 유형 <span>선택</span></label>
+            <select id="organizationType" name="organizationType" defaultValue="">
+              <option value="">선택해 주세요</option>
+              <option>공공기관·지자체</option>
+              <option>기업·기관</option>
+              <option>협회·단체</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div className="field">
+            <label htmlFor="projectStage">사업 단계 <span>선택</span></label>
+            <select id="projectStage" name="projectStage" defaultValue="">
+              <option value="">선택해 주세요</option>
+              <option>사업 구상 중</option>
+              <option>과업지시서 준비 중</option>
+              <option>제작사 검토 중</option>
+              <option>일정 확정·긴급 문의</option>
+            </select>
+          </div>
           <div className="field full">
             <label htmlFor="projectName">
               사업/프로젝트명 <span>선택 · 가칭도 괜찮습니다</span>
@@ -299,7 +321,7 @@ export default function ContactForm({
               </p>
             )}
             <p className="form-help" style={{ margin: '12px 0 0' }}>
-              사업계획서나 참고 파일은 이메일을 보낼 때 직접 첨부해 주세요.
+              과업지시서(HWP·HWPX·PDF)나 참고 파일은 이메일을 보낼 때 직접 첨부해 주세요.
             </p>
           </div>
         </div>

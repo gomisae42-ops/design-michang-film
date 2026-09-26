@@ -8,7 +8,7 @@ export const metadata = filmMetadata(
 );
 export default function Page() {
   return (
-    <>
+    <div className="video-page">
       <FilmIntro
         label="영상제작"
         title={
@@ -84,6 +84,6 @@ export default function Page() {
         source="video-final"
         title="어떤 영상이 필요한지부터 함께 정리합니다."
       />
-    </>
+    </div>
   );
 }

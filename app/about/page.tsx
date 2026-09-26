@@ -9,7 +9,7 @@ export const metadata = filmMetadata(
 );
 export default function Page() {
   return (
-    <>
+    <div className="about-page">
       <FilmIntro
         label="디자인미창"
         title={
@@ -56,6 +56,17 @@ export default function Page() {
           함께 일하는 과정 보기 <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </section>
+      <section className="about-archive" aria-labelledby="archive-title">
+        <div className="film-wrap about-archive-grid">
+          <p className="film-kicker">쌓아온 기반</p>
+          <h2 id="archive-title">1990<span>년부터</span></h2>
+          <div>
+            <h3>미창문화사에서 시작한<br />디자인·인쇄·출판의 경험.</h3>
+            <p>한 장의 인쇄물부터 한 편의 영상까지, 사업의 목적을 이해하고 정확하게 완성하는 태도를 이어갑니다.</p>
+            <small>회사 연혁 기준이며 영상사업의 업력을 뜻하지 않습니다.</small>
+          </div>
+        </div>
+      </section>
       <section className="film-wrap film-section" id="evidence">
         <FilmHeading
           label="프로젝트"
@@ -78,6 +89,6 @@ export default function Page() {
         </div>
       </section>
       <FinalCTA source="about" title="함께 준비할 프로젝트를 들려주세요." />
-    </>
+    </div>
   );
 }

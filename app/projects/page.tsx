@@ -6,7 +6,7 @@ export const metadata = filmMetadata(
 );
 export default function Page() {
   return (
-    <>
+    <div className="projects-page">
       <FilmIntro
         label="프로젝트"
         title={
@@ -31,8 +31,12 @@ export default function Page() {
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
+        <div className="project-next-slot" aria-label="다음 프로젝트 준비 중">
+          <span>Next project</span>
+          <p>다음 이야기가 놓일 자리</p>
+        </div>
       </section>
       <FinalCTA source="projects" />
-    </>
+    </div>
   );
 }

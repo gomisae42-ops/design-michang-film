@@ -9,8 +9,8 @@ export const media = {
     video: '',
   },
   gunpo: {
-    src: '',
-    alt: '군포 소공인 다큐멘터리 대표 장면',
+    src: '/media/home-gunpo/project-hands.webp',
+    alt: '도면 위 금속 부품을 측정하는 군포 소공인의 손',
     video: '',
     captions: '',
   },
@@ -130,7 +130,7 @@ export const projects = [
     slug: 'gunpo',
     title: '군포의 작은 손이 만드는 큰 이야기',
     client: '군포산업진흥원 소공인지원센터',
-    year: null as number | null,
+    year: 2026 as number | null,
     type: '소공인 다큐멘터리',
     description:
       '사람의 이야기 속에 지역의 미래가 있습니다. 소공인의 기술과 일상을 기록하는 다큐멘터리 프로젝트입니다.',
