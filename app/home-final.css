@@ -27,7 +27,7 @@
 }
 .home-eyebrow,
 .home-section-label {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -35,7 +35,7 @@
   margin-bottom: 28px;
 }
 .home-final h2 {
-  font-size: clamp(36px, 4.4vw, 68px);
+  font-size: clamp(36px, 3.8vw, 58px);
 }
 .home-text-link {
   display: inline-flex;
@@ -43,7 +43,7 @@
   gap: 24px;
   padding: 12px 0;
   border-bottom: 1px solid currentColor;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -55,7 +55,7 @@
   transform: translateX(4px);
 }
 .home-index {
-  font-size: 14px;
+  font-size: 16px;
   color: #b52b35;
   font-weight: 500;
 }
@@ -234,14 +234,14 @@
   gap: 75px;
 }
 .home-bridge h2 {
-  font-size: clamp(44px, 5.5vw, 88px);
+  font-size: clamp(40px, 4.3vw, 64px);
 }
 .home-bridge-follow {
   width: 52%;
   margin-left: auto;
 }
 .home-bridge-follow p {
-  font-size: clamp(20px, 1.9vw, 28px);
+  font-size: clamp(24px, 2.2vw, 34px);
   line-height: 1.8;
   word-break: keep-all;
 }
@@ -295,10 +295,11 @@
   font: inherit;
 }
 .home-selected-info p {
-  font-size: 15px;
+  font-size: 18px;
 }
 .home-selected-info .home-text-link {
   margin-top: 24px;
+  font-size: 18px;
 }
 .home-story {
   display: grid;
@@ -416,13 +417,13 @@
   border-top: 1px solid #d5d5d0;
 }
 .home-why-columns h3 {
-  font-size: 25px;
+  font-size: 29px;
   margin: 28px 0 20px;
   word-break: keep-all;
 }
 .home-why-columns p {
   color: var(--home-muted);
-  font-size: 17px;
+  font-size: 19px;
   word-break: keep-all;
 }
 .home-process {
@@ -1280,4 +1281,35 @@
 .home-make .home-text-link:hover {
   color: #242424;
   border-bottom-color: #242424;
+}
+
+/* 2026-09 full typography rebalance: smaller display type, readable body copy. */
+.home-story-heading > p:last-child,
+.home-chapter-body > p:not(.home-eyebrow),
+.home-services-list p,
+.home-why-columns p,
+.home-trust p {
+  font-size: 19px;
+  line-height: 1.75;
+}
+.home-service-visual figcaption,
+.home-trust .home-note { font-size: 16px; line-height: 1.65; }
+.home-timeline p { font-size: 17px; line-height: 1.65; }
+.home-timeline h3 { font-size: 25px; }
+.home-contact-button { font-size: 18px; }
+.home-final-cta h2 { font-size: clamp(36px, 3.8vw, 58px); }
+.home-final-cta .home-container > p:not(.home-eyebrow) { font-size: 20px; }
+.signature-gallery .signature-primary,
+.signature-gallery .signature-secondary { font-size: 16px; }
+
+@media (max-width: 767px) {
+  .home-eyebrow,
+  .home-section-label { font-size: 16px; }
+  .home-text-link { font-size: 17px; }
+  .home-story-heading > p:last-child,
+  .home-chapter-body > p:not(.home-eyebrow),
+  .home-services-list p,
+  .home-why-columns p,
+  .home-trust p { font-size: 17px; }
+  .home-timeline p { font-size: 17px; }
 }

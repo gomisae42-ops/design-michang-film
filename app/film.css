@@ -123,7 +123,7 @@
 .about-page .film-intro { background: var(--paper-ivory); }
 .about-page .film-intro h1 { font-size: clamp(54px, 6.5vw, 94px); line-height: 1.08; }
 .about-page .about-statement { background: var(--film-black); color: #fffaf3; padding: clamp(56px, 8vw, 120px); }
-.about-page .about-statement h2 { font-size: clamp(46px, 6vw, 86px); line-height: 1.12; }
+.about-page .about-statement h2 { font-size: clamp(38px, 4.2vw, 62px); line-height: 1.2; }
 .about-page .about-statement > p:last-child { color: #d7dadc; }
 .about-page .capability-row { padding-block: 62px; border-color: var(--steel-silver); }
 .about-page .capability-row h3 { font-size: clamp(30px, 3vw, 46px); }
@@ -1970,13 +1970,13 @@ figcaption {
 .title-line { transition: color .3s ease; }
 .title-line-strong { color: currentColor; }
 .title-line-middle { color: color-mix(in srgb, currentColor 80%, transparent); }
-.title-line-soft { color: color-mix(in srgb, currentColor 64%, transparent); }
+.title-line-soft { color: color-mix(in srgb, currentColor 60%, transparent); }
 .video-page .film-intro:hover .title-line-soft { color: var(--human-coral); }
 .projects-page .project-people { color: color-mix(in srgb, currentColor 80%, transparent); }
 .projects-page .film-intro { background: #c7e1de; }
 .process-page .film-intro:hover .title-line-middle { color: var(--human-coral); }
 .process-page .title-line-complete { color: var(--ink-navy); }
-.about-page .film-intro:hover .about-partner-line { color: var(--ink-navy); }
+.about-page .film-intro:hover .about-partner-line { color: #007f78; }
 
 .video-page .film-intro h1,
 .projects-page .film-intro h1,
@@ -2002,6 +2002,31 @@ figcaption {
 .process-page .service-jumps { justify-content: center; }
 
 .video-page .service-jumps a { font-size: 17px; }
+.process-page .service-jumps a {
+  font-size: 18px;
+  font-weight: 500;
+}
+.process-hero-image {
+  position: relative;
+  height: clamp(360px, 48vw, 620px);
+  margin-bottom: 56px;
+  overflow: hidden;
+}
+.process-hero-image img {
+  object-fit: cover;
+  object-position: center 42%;
+}
+.process-stage-image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  margin-top: 30px;
+  overflow: hidden;
+  background: #dedbd3;
+}
+.process-stage-image img { object-fit: cover; }
+.film-detail-steps > li:nth-child(6) .process-stage-image img {
+  object-position: center 52%;
+}
 .video-page .film-service-detail {
   grid-template-columns: 54px minmax(0, 1fr) minmax(320px, .88fr);
   gap: clamp(32px, 4vw, 72px);
@@ -2055,6 +2080,19 @@ figcaption {
 .process-page .film-detail-steps > li {
   grid-template-columns: 54px minmax(0, 1.25fr) minmax(280px, .9fr);
 }
+.process-page .step-responsibilities dt {
+  font-size: 17px;
+  line-height: 1.55;
+}
+.process-page .step-responsibilities dd {
+  font-size: 21px;
+  line-height: 1.55;
+}
+.process-page .film-detail-steps li[data-reveal-active] .row-number {
+  background-color: #63d7d1;
+  color: #121212;
+}
+.process-scope-section .scope-note { margin-top: 0; }
 
 .about-page .about-statement {
   background: #ead9e5;
@@ -2097,6 +2135,11 @@ figcaption {
     font-size: clamp(38px, 10.5vw, 48px);
   }
   .film-intro .film-desc { font-size: 17px; }
+  .process-hero-image {
+    height: 72vw;
+    min-height: 300px;
+    margin-bottom: 38px;
+  }
   .video-page > .film-wrap.film-section,
   .process-page > .film-wrap.film-section { padding-inline: 20px; }
   .case-document,
@@ -2113,5 +2156,63 @@ figcaption {
   .process-page .film-detail-steps p,
   .process-page .step-responsibilities dd,
   .about-page .capability-row p,
+  .scope-note p { font-size: 17px; }
+}
+
+/* 2026-09 full site typography rebalance. */
+:is(.video-page, .projects-page, .process-page, .about-page) .film-kicker {
+  font-size: 17px;
+}
+:is(.video-page, .projects-page, .process-page, .about-page) .film-intro h1 {
+  font-size: clamp(44px, 4.8vw, 70px);
+  line-height: 1.14;
+}
+:is(.video-page, .projects-page, .process-page, .about-page) .film-intro .film-desc {
+  font-size: clamp(20px, 1.45vw, 23px);
+  line-height: 1.75;
+}
+.video-page .film-service-detail h2,
+.process-page .film-detail-steps h2 {
+  font-size: clamp(32px, 3vw, 46px);
+}
+.video-page .film-service-detail h3,
+.video-page .film-service-detail .film-desc,
+.video-page .service-delivery > p,
+.projects-page .film-project-caption,
+.projects-page .film-project-card > p,
+.process-page .film-detail-steps p,
+.process-page .step-detail [data-slot='accordion-content'],
+.about-page .capability-row p,
+.scope-note p {
+  font-size: 19px;
+  line-height: 1.75;
+}
+.projects-page .project-title-row h2 {
+  font-size: clamp(34px, 3.6vw, 54px);
+}
+.about-page .capability-row h3 {
+  font-size: clamp(28px, 2.6vw, 40px);
+}
+.about-page .about-statement > p,
+.about-archive p { font-size: 20px; line-height: 1.75; }
+.film-final p:not(.film-kicker) { font-size: 20px; }
+.film-button,
+.film-text-link { font-size: 17px; }
+
+@media (max-width: 767px) {
+  :is(.video-page, .projects-page, .process-page, .about-page) .film-intro h1 {
+    font-size: clamp(36px, 9.6vw, 45px);
+  }
+  :is(.video-page, .projects-page, .process-page, .about-page) .film-intro .film-desc,
+  .video-page .film-service-detail h3,
+  .video-page .film-service-detail .film-desc,
+  .video-page .service-delivery > p,
+  .projects-page .film-project-caption,
+  .projects-page .film-project-card > p,
+  .process-page .film-detail-steps p,
+  .process-page .step-detail [data-slot='accordion-content'],
+  .about-page .capability-row p,
+  .about-page .about-statement > p,
+  .about-archive p,
   .scope-note p { font-size: 17px; }
 }
