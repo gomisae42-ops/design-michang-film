@@ -289,23 +289,46 @@
   padding-bottom: 125px;
   align-items: end;
 }
-.home-selected-info h2 span {
+.home-selected-info h2 {
+  font-size: clamp(32px, 3vw, 46px);
+}
+.home-selected-info h2 .home-selected-kicker {
   display: block;
   font-size: calc(0.62em - 3px);
   font-weight: 400;
   margin-bottom: 12px;
 }
-.home-selected-info h2 strong {
+.home-selected-info h2 .home-selected-title-line {
   display: block;
-  font: inherit;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 0;
 }
-.home-selected-info h2 strong > span { display: inline; }
 .home-selected-people {
-  color: color-mix(in srgb, var(--home-ink) 76%, transparent);
+  color: color-mix(in srgb, #000 70%, transparent);
+  font-weight: 750;
   transition: color 360ms ease;
 }
 .home-selected-info:hover .home-selected-people {
-  color: #2f6fa3;
+  color: #e5532f;
+}
+.home-heading-second {
+  color: color-mix(in srgb, #000 71%, transparent);
+  transition: color 320ms ease;
+}
+.home-story-heading h2:hover .home-heading-second,
+.home-chapter:hover .home-heading-second,
+.home-make h2:hover .home-heading-second,
+.home-why > h2:hover .home-heading-second,
+.home-section-head h2:hover .home-heading-second,
+.home-trust h3:hover .home-heading-second,
+.home-final-cta h2:hover .home-heading-second {
+  color: #e5532f;
+}
+.home-trust-small-line {
+  color: #8b9197;
+  font-size: 0.7em;
+  font-weight: 500;
 }
 .home-selected-info p {
   font-size: 18px;
@@ -730,10 +753,13 @@
     gap: 25px;
   }
   .home-selected-info h2 {
-    font-size: 36px;
+    font-size: clamp(27px, 7.1vw, 34px);
   }
-  .home-selected-info h2 span {
-    font-size: 22px;
+  .home-selected-info h2 .home-selected-kicker {
+    font-size: 21px;
+  }
+  .home-selected-info h2 .home-selected-title-line {
+    font-size: 1em;
   }
   .home-selected-info p {
     font-size: 14px;

@@ -1945,6 +1945,13 @@ figcaption {
   font-size: clamp(42px, 5vw, 70px);
   line-height: 1.12;
 }
+.case-document .case-title-second {
+  color: color-mix(in srgb, #000 71%, transparent);
+  transition: color 320ms ease;
+}
+.case-document .case-section-copy h2:hover .case-title-second {
+  color: #e5532f;
+}
 .case-document .case-section-copy > p:last-child {
   grid-column: 2;
   max-width: 700px;
@@ -1976,7 +1983,12 @@ figcaption {
 .projects-page .film-intro { background: #c7e1de; }
 .process-page .film-intro:hover .title-line-middle { color: var(--human-coral); }
 .process-page .title-line-complete { color: var(--ink-navy); }
-.about-page .film-intro:hover .about-partner-line { color: #007f78; }
+.process-page .film-intro {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: var(--paper-ivory);
+}
+.about-page .film-intro:hover .about-partner-line { color: #d64f8b; }
 
 .video-page .film-intro h1,
 .projects-page .film-intro h1,
@@ -2093,6 +2105,20 @@ figcaption {
   color: #121212;
 }
 .process-scope-section .scope-note { margin-top: 0; }
+.process-page .film-final,
+.process-page .process-scope-section {
+  background: #efefec;
+}
+.process-page .film-final {
+  padding-bottom: 64px;
+}
+.process-page .process-scope-section {
+  padding-top: 0;
+}
+.process-page .process-scope-section .scope-note {
+  max-width: 100%;
+  padding-top: 42px;
+}
 
 .about-page .about-statement {
   background: #ead9e5;
@@ -2103,6 +2129,13 @@ figcaption {
 }
 .about-page .about-statement > p:last-child {
   color: color-mix(in srgb, var(--film-black) 72%, transparent);
+}
+.about-page .about-statement-second {
+  color: color-mix(in srgb, #000 80%, transparent);
+  transition: color 320ms ease;
+}
+.about-page .about-statement h2:hover .about-statement-second {
+  color: #a98213;
 }
 .case-document {
   width: 100%;
@@ -2210,6 +2243,62 @@ figcaption {
   :is(.video-page, .projects-page, .process-page, .about-page) figcaption {
     font-size: 16px;
   }
+}
+
+/* Process page: MoMA PS1-inspired sequence of nine color fields. */
+.process-page {
+  --process-gutter: max(64px, calc((100vw - 1312px) / 2));
+}
+.process-page .film-intro {
+  background: #d9c9ee;
+}
+.process-page .film-intro .title-line-middle {
+  color: #e5532f;
+}
+.process-page > .film-wrap.film-section {
+  padding-inline: var(--process-gutter);
+}
+.process-page .film-detail-steps > li {
+  margin-inline: calc(-1 * var(--process-gutter));
+  padding-inline: var(--process-gutter);
+  border-color: color-mix(in srgb, #17202a 18%, transparent);
+}
+.process-page .film-detail-steps > li:nth-child(1) { background: #fff; }
+.process-page .film-detail-steps > li:nth-child(2) { background: #f3c8df; }
+.process-page .film-detail-steps > li:nth-child(3) { background: #caecef; }
+.process-page .film-detail-steps > li:nth-child(4) { background: #d9dde1; }
+.process-page .film-detail-steps > li:nth-child(5) { background: #f5edaa; }
+.process-page .film-detail-steps > li:nth-child(6) { background: #d9ebb5; }
+.process-page .film-detail-steps > li:nth-child(7) { background: #d9dde1; }
+.process-page .film-detail-steps > li:nth-child(8) { background: #d9f1f2; }
+
+.process-page .film-detail-steps > li:nth-child(1) h2 { color: #343434; }
+.process-page .film-detail-steps > li:nth-child(2) h2 { color: #651738; }
+.process-page .film-detail-steps > li:nth-child(3) h2 { color: #7d858d; }
+.process-page .film-detail-steps > li:nth-child(4) h2 { color: #343434; }
+.process-page .film-detail-steps > li:nth-child(5) h2 { color: #62328c; }
+.process-page .film-detail-steps > li:nth-child(6) h2 { color: #967600; }
+.process-page .film-detail-steps > li:nth-child(7) h2 { color: #565656; }
+.process-page .film-detail-steps > li:nth-child(8) h2 { color: #3e235f; }
+
+.process-page .film-detail-steps > li:hover,
+.process-page .film-detail-steps > li:focus {
+  margin-inline: calc(-1 * var(--process-gutter));
+  padding-inline: var(--process-gutter);
+  color: #242424;
+}
+.process-page .film-detail-steps > li:hover p,
+.process-page .film-detail-steps > li:hover dt,
+.process-page .film-detail-steps > li:focus p,
+.process-page .film-detail-steps > li:focus dt {
+  color: #46515b;
+}
+
+@media (max-width: 1023px) {
+  .process-page { --process-gutter: 32px; }
+}
+@media (max-width: 767px) {
+  .process-page { --process-gutter: 20px; }
 }
 
 /* 2026-09 full site typography rebalance. */

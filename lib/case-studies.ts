@@ -34,7 +34,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         group: 'overview',
         kind: 'text',
         status: 'approved',
-        title: '사람과 기술, 지역의 이야기',
+        title: '사람과 기술,\n지역의 이야기',
         body: '군포 소공인의 기술과 일상을 기록하는 다큐멘터리 프로젝트입니다. 기술을 만드는 사람과 그 사람이 일하는 현장을 통해 지역 산업의 가치를 바라봅니다.',
         image: {
           src: '/media/home-gunpo/story-city.webp',
@@ -47,7 +47,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         group: 'story',
         kind: 'text',
         status: 'approved',
-        title: '산업을 설명하는 데서, 현장을 보여주는 이야기로',
+        title: '산업을 설명하는 데서,\n현장을 보여주는 이야기로',
         body: '지원사업을 제도와 수치만으로 설명하지 않고, 그 안에서 일하는 사람의 목소리와 손의 움직임에서 이야기를 시작했습니다. 오래 사용한 공구와 금속의 질감은 기술이 쌓인 시간을 보여줍니다.',
         image: {
           src: '/media/home-gunpo/story-tools.webp',

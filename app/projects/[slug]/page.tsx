@@ -83,7 +83,17 @@ export default async function Page({
               <section key={s.id} id={s.id} className="film-case-section">
                 <div className="case-section-copy">
                   <p className="film-kicker">{caseGroupLabels[s.group]}</p>
-                  <h2>{s.title}</h2>
+                  <h2>
+                    {s.title.split('\n').map((line, index) => (
+                      <span
+                        key={line}
+                        className={index === 1 ? 'case-title-second' : undefined}
+                      >
+                        {index > 0 && <br />}
+                        {line}
+                      </span>
+                    ))}
+                  </h2>
                   <p>{s.body}</p>
                 </div>
                 {s.image && (

@@ -27,9 +27,9 @@ export default function Page() {
         <section className="about-statement">
           <p className="film-kicker">디자인에서 영상까지</p>
           <h2>
-            종이의 한 면에서
+            <span>종이의 한 면에서</span>
             <br />
-            영상의 한 장면까지.
+            <span className="about-statement-second">영상의 한 장면까지</span>
           </h2>
           <p>
             메시지를 정리하는 기획, 시선을 이끄는 디자인, 제작의 마지막을 살피는

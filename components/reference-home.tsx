@@ -95,12 +95,11 @@ export default function ReferenceHome() {
         </Link>
         <div className="home-container home-selected-info">
           <h2 id="gunpo-title">
-            <span>보이지 않는 곳에서</span>
-            <strong>
-              <span>군포의 산업을</span>
-              <br />
-              <span className="home-selected-people">만드는 사람들</span>
-            </strong>
+            <span className="home-selected-kicker">보이지 않는 곳에서</span>
+            <span className="home-selected-title-line">
+              군포의 산업을{' '}
+              <strong className="home-selected-people">만드는 사람들</strong>
+            </span>
           </h2>
           <div>
             <p>군포산업진흥원 소공인지원센터 · 2026</p>
@@ -117,9 +116,9 @@ export default function ReferenceHome() {
         <div className="home-story-heading">
           <p className="home-eyebrow">이야기가 되는 과정</p>
           <h2 id="story-title">
-            왜 만들고,
+            <span>왜 만들고,</span>
             <br />
-            어떻게 담았는가.
+            <span className="home-heading-second">어떻게 담았는가</span>
           </h2>
           <p>군포 소공인 다큐멘터리</p>
         </div>
@@ -142,7 +141,10 @@ export default function ReferenceHome() {
                 </p>
                 <h3>
                   {s.title.split('\n').map((line, j) => (
-                    <span key={line}>
+                    <span
+                      key={line}
+                      className={j === 1 ? 'home-heading-second' : undefined}
+                    >
                       {j > 0 && <br />}
                       {line}
                     </span>
@@ -164,9 +166,9 @@ export default function ReferenceHome() {
         <div className="home-container">
           <p className="home-eyebrow">영상제작 분야</p>
           <h2>
-            목적에 맞는
+            <span>목적에 맞는</span>
             <br />
-            영상을 제안합니다.
+            <span className="home-heading-second">영상을 제안합니다.</span>
           </h2>
           <HomeServices />
           <Link href="/video/" className="home-text-link">
@@ -180,9 +182,9 @@ export default function ReferenceHome() {
       >
         <p className="home-eyebrow">디자인미창의 방식</p>
         <h2>
-          우리는 카메라를 들기 전에
+          <span>우리는 카메라를 들기 전에</span>
           <br />
-          사업부터 이해합니다.
+          <span className="home-heading-second">사업부터 이해합니다.</span>
         </h2>
         <div className="home-why-columns">
           {approach.map(([title, body], i) => (
@@ -208,9 +210,9 @@ export default function ReferenceHome() {
             <div>
               <p className="home-eyebrow">함께 만드는 과정</p>
               <h2>
-                첫 이야기부터,
+                <span>첫 이야기부터,</span>
                 <br />
-                마지막 전달까지.
+                <span className="home-heading-second">마지막 전달까지.</span>
               </h2>
             </div>
             <Link href="/process/" className="home-text-link">
@@ -249,9 +251,9 @@ export default function ReferenceHome() {
           </h2>
           <div>
             <h3>
-              미창문화사로 시작한
+              <span className="home-trust-small-line">30여 년을 성장해 온</span>
               <br />
-              디자인·인쇄·출판의 경험.
+              <span className="home-heading-second">디자인·인쇄·출판의 경험.</span>
             </h3>
             <p>
               여러 매체에 이야기를 담아온 기반 위에서
@@ -271,9 +273,9 @@ export default function ReferenceHome() {
         <div className="home-container">
           <p className="home-eyebrow">함께 시작할 이야기</p>
           <h2>
-            당신의 사업에도
+            <span>당신의 사업에도</span>
             <br />
-            기록해야 할 이야기가 있습니다.
+            <span className="home-heading-second">기록해야 할 이야기가 있습니다.</span>
           </h2>
           <p>
             아직 기획이 정리되지 않았어도 괜찮습니다.
