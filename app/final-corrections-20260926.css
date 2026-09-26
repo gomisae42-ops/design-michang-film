@@ -1,0 +1,109 @@
+/* Representative-approved final corrections — 2026-09-26. */
+
+/* Process intro: support both the current and previously deployed markup. */
+.process-page .film-intro.film-wrap,
+.process-page .film-intro .film-intro-inner {
+  box-sizing: border-box !important;
+  width: min(1312px, calc(100% - 128px)) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+}
+
+/* Keep the intro background full-width even when the deployed markup differs. */
+.process-page .film-intro.film-wrap {
+  padding-inline: 0 !important;
+}
+
+/* Case-study hero: readable, useful and connected to the client introduction. */
+.case-hero-copy,
+.case-hero-copy h1,
+.case-hero-copy p,
+.case-hero-copy span {
+  color: #fffaf3 !important;
+}
+.case-hero-copy > p:not(.film-kicker) {
+  font-size: 22px !important;
+  line-height: 1.75 !important;
+  font-weight: 500 !important;
+}
+.case-hero-copy > span {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.case-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 250, 243, .7);
+  color: #fffaf3 !important;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Quick facts and case text: 20% stronger and larger. */
+.case-document > .film-kicker,
+.film-case-meta dt,
+.film-case-meta dd,
+.case-availability,
+.film-case-toc a {
+  color: #303840 !important;
+  font-weight: 700 !important;
+}
+.case-document > .film-kicker { font-size: 17px !important; }
+.film-case-meta dt { font-size: 17px !important; }
+.film-case-meta dd { font-size: 22px !important; }
+.case-availability { font-size: 19px !important; }
+.film-case-toc a { font-size: 18px !important; }
+
+/* Requested +4px title/body increase and two-line hierarchy. */
+.case-section-copy h2 {
+  font-size: clamp(46px, calc(5vw + 4px), 74px) !important;
+  line-height: 1.14 !important;
+}
+.case-title-second,
+.case-next h3 span,
+.film-final-title-second {
+  font-size: 80%;
+  color: color-mix(in srgb, currentColor 72%, transparent);
+  transition: color .28s ease;
+}
+.case-section-copy h2:hover .case-title-second,
+.case-next h3:hover span,
+.film-final h2:hover .film-final-title-second {
+  color: #d9782d;
+}
+.case-section-copy > p:last-child {
+  font-size: 22px !important;
+  line-height: 1.8 !important;
+  font-weight: 500;
+}
+.case-next h3 {
+  font-size: 27px !important;
+  line-height: 1.25;
+}
+.case-next p { font-size: 20px !important; line-height: 1.75; }
+.film-final h2 { font-size: clamp(36px, calc(3.3vw + 4px), 52px) !important; }
+
+/* Contact intro background requested in a pale warm jade tone. */
+main:has(.film-contact-layout) > .film-intro {
+  background: #e7f0e9 !important;
+}
+
+@media (max-width: 1023px) {
+  .process-page .film-intro.film-wrap,
+  .process-page .film-intro .film-intro-inner {
+    width: calc(100% - 64px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .process-page .film-intro.film-wrap,
+  .process-page .film-intro .film-intro-inner {
+    width: calc(100% - 40px) !important;
+  }
+  .case-section-copy h2 { font-size: clamp(38px, 10vw, 48px) !important; }
+  .case-section-copy > p:last-child { font-size: 20px !important; }
+  .case-hero-copy > p:not(.film-kicker) { font-size: 19px !important; }
+}

@@ -55,6 +55,10 @@ export default async function Page({
           <h1>군포의 작은 손이<br />만드는 큰 이야기</h1>
           <p>{study.intro}</p>
           <span>군포산업진흥원 소공인지원센터 · 군포 · 2026</span>
+          <a className="case-hero-link" href="#overview">
+            소공인지원센터 프로젝트 소개 보기{' '}
+            <ArrowRight size={20} aria-hidden="true" />
+          </a>
         </div>
       </section>
       <div className="film-wrap film-section case-document">
@@ -118,7 +122,10 @@ export default async function Page({
               </section>
             ))}
             <aside className="case-next">
-              <h3>비슷한 사업을 준비하고 계신가요?</h3>
+              <h3>
+                비슷한 사업을<br />
+                <span>준비하고 계신가요?</span>
+              </h3>
               <p>
                 다큐멘터리가 어떤 목적에 어울리는지, 제작 과정에서 무엇을
                 준비하면 되는지 살펴보세요.
@@ -142,7 +149,7 @@ export default async function Page({
           source="case-final"
           service="documentary"
           project={slug}
-          title="비슷한 프로젝트를 준비하고 계신가요?"
+          title={'비슷한 프로젝트를\n준비하고 계신가요?'}
         />
       </div>
     </>

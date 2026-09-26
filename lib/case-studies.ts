@@ -60,7 +60,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         group: 'production',
         kind: 'text',
         status: 'approved',
-        title: '말과 장면을 이어, 일하는 현장의 리듬으로',
+        title: '말과 장면을 이어,\n일하는 현장의 리듬으로',
         body: '작업하는 손, 움직이는 기계, 현장의 공간을 담은 화면에 인터뷰의 목소리를 연결했습니다. 사람과 기술, 지역이 따로 보이지 않도록 한 편의 흐름으로 엮었습니다.',
         image: {
           src: '/media/home-gunpo/story-machine.webp',
@@ -73,7 +73,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         group: 'results',
         kind: 'deliverables',
         status: 'approved',
-        title: '군포 소공인의 이야기를 한 편의 다큐멘터리로',
+        title: '군포 소공인의 이야기를\n한 편의 다큐멘터리로',
         body: '사람의 목소리와 작업 현장, 지원사업의 맥락을 영상으로 엮었습니다. 공개 가능한 제작 범위와 납품 정보는 확인되는 대로 정확하게 보완합니다.',
         image: {
           src: '/media/home-gunpo/project-hands.webp',

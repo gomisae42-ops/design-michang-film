@@ -53,10 +53,12 @@ export function FilmIntro({
   desc: string;
 }) {
   return (
-    <section className="film-intro film-wrap">
-      <p className="film-kicker">{label}</p>
-      <h1>{title}</h1>
-      <p className="film-desc">{desc}</p>
+    <section className="film-intro">
+      <div className="film-wrap film-intro-inner">
+        <p className="film-kicker">{label}</p>
+        <h1>{title}</h1>
+        <p className="film-desc">{desc}</p>
+      </div>
     </section>
   );
 }
@@ -76,12 +78,23 @@ export function FinalCTA({
     ...(service ? { service } : {}),
     ...(project ? { project } : {}),
   });
+  const titleLines = title.split('\n');
   return (
     <section className="film-final" id="inquiry">
       <div className="film-wrap film-final-inner">
         <div>
           <p className="film-kicker">함께 시작할 이야기</p>
-          <h2>{title}</h2>
+          <h2>
+            {titleLines.map((line, index) => (
+              <span
+                key={`${line}-${index}`}
+                className={index === 1 ? 'film-final-title-second' : undefined}
+              >
+                {index > 0 && <br />}
+                {line}
+              </span>
+            ))}
+          </h2>
           <p>
             아직 기획이 정리되지 않았어도,
             <br className="desktop-break" /> 사업 목적과 일정부터 함께

@@ -9,6 +9,7 @@ import {
 import './globals.css';
 import './film.css';
 import './color-reveal.css';
+import './final-corrections-20260926.css';
 import ColorReveal from '@/components/color-reveal';
 
 export const metadata: Metadata = {
