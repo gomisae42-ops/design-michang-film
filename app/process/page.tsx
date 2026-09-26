@@ -63,7 +63,9 @@ export default function Page() {
       <FinalCTA source="process" title={'영상프로젝트를\n준비하고 계신가요?'} />
       <section className="film-wrap film-section process-scope-section">
         <section className="scope-note">
-          <h2>지금 있는 자료부터 보내주세요.</h2>
+          <h2>
+            지금 있는 자료부터 <span className="scope-title-second">보내주세요.</span>
+          </h2>
           <p>
             완성된 기획안이 없어도 괜찮습니다. 아래 내용 중 준비된 것부터
             알려주세요.

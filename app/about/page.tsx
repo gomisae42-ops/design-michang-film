@@ -61,7 +61,11 @@ export default function Page() {
           <p className="film-kicker">쌓아온 기반</p>
           <h2 id="archive-title">1997<span>년부터</span></h2>
           <div>
-            <h3>30여 년을 성장해 온<br />디자인 인쇄 출판의 경험.</h3>
+            <h3>
+              <span>30여 년을 성장해 온</span>
+              <br />
+              <span className="about-archive-title-second">디자인 인쇄 출판의 경험.</span>
+            </h3>
             <p>한 장의 인쇄물부터 한 편의 영상까지, 사업의 목적을 이해하고 정확하게 완성하는 태도를 이어갑니다.</p>
           </div>
         </div>

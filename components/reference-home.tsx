@@ -6,15 +6,24 @@ import HomeServices from '@/components/home-services';
 import { processStages } from '@/lib/film-design';
 
 const approach = [
-  [
-    '사업을 이해하는 기획',
-    '사업계획서와 과업의 목적에서 핵심 메시지를 찾습니다.',
-  ],
-  ['사람을 발견하는 스토리텔링', '제도보다 그 안에서 일하는 사람을 봅니다.'],
-  [
-    '하나의 톤으로 완성하는 통합 제작',
-    '영상·디자인·인쇄·콘텐츠를 하나의 이야기로 연결합니다.',
-  ],
+  {
+    lead: '사업을 이해하는 ',
+    keyword: '기획',
+    tone: 'planning',
+    body: '사업계획서와 과업의 목적에서 핵심 메시지를 찾습니다.',
+  },
+  {
+    lead: '사람을 발견하는 ',
+    keyword: '스토리텔링',
+    tone: 'storytelling',
+    body: '제도보다 그 안에서 일하는 사람을 봅니다.',
+  },
+  {
+    lead: '하나의 톤으로 완성하는 ',
+    keyword: '통합 제작',
+    tone: 'integrated',
+    body: '영상·디자인·인쇄·콘텐츠를 하나의 이야기로 연결합니다.',
+  },
 ];
 const story = [
   {
@@ -199,15 +208,16 @@ export default function ReferenceHome() {
           <span className="home-heading-second">사업부터 이해합니다.</span>
         </h2>
         <div className="home-why-columns">
-          {approach.map(([title, body], i) => (
+          {approach.map(({ lead, keyword, tone, body }, i) => (
             <article
-              key={title}
+              key={keyword}
               tabIndex={0}
-              data-color-reveal={['orange', 'pink', 'violet'][i]}
               data-reveal-mobile={i === 0 ? '' : undefined}
             >
               <span className="home-index">0{i + 1}</span>
-              <h3>{title}</h3>
+              <h3>
+                {lead}<span className={`home-why-keyword home-why-${tone}`}>{keyword}</span>
+              </h3>
               <p>{body}</p>
             </article>
           ))}

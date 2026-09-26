@@ -134,6 +134,48 @@ main:has(.film-contact-layout) > .film-intro {
   background: #e7f0e9 !important;
 }
 
+/* 2026-09-27: about-page readability and contact-page scale. */
+.about-page .about-archive-title-second {
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+.about-page .about-statement > p,
+.about-page .capability-row p,
+.about-page .about-archive p,
+.about-page .evidence-block p {
+  font-weight: 600 !important;
+}
+.about-page .about-statement > p,
+.about-page .capability-row p { font-size: 20px !important; }
+.about-page .about-archive p { font-size: 36px !important; }
+
+main:has(.film-contact-layout) > .film-intro .film-kicker { font-size: 18px !important; }
+main:has(.film-contact-layout) > .film-intro h1 {
+  font-size: clamp(44px, calc(4.4vw + 2px), 66px) !important;
+}
+main:has(.film-contact-layout) > .film-intro .film-desc { font-size: 20px !important; }
+main:has(.film-contact-layout) .film-contact-info h2 { font-size: 32px !important; }
+main:has(.film-contact-layout) .film-contact-info > a { font-size: 22px !important; }
+main:has(.film-contact-layout) .film-contact-info > p { font-size: 18px !important; }
+main:has(.film-contact-layout) .contact-steps { font-size: 18px !important; }
+main:has(.film-contact-layout) .film-form h2 { font-size: 30px !important; }
+main:has(.film-contact-layout) .film-form .form-help,
+main:has(.film-contact-layout) .field > label,
+main:has(.film-contact-layout) .field input,
+main:has(.film-contact-layout) .field textarea,
+main:has(.film-contact-layout) .field select { font-size: 17px !important; }
+main:has(.film-contact-layout) .film-notice { font-size: 18px !important; }
+main:has(.film-contact-layout) .film-button,
+.film-nav .film-nav-cta {
+  background: #132c44 !important;
+  border-color: #132c44 !important;
+  color: #fff !important;
+}
+main:has(.film-contact-layout) .film-button:hover,
+.film-nav .film-nav-cta:hover {
+  background: #1d4261 !important;
+}
+main:has(.film-contact-layout) .film-button { font-size: 18px !important; }
+
 @media (max-width: 1023px) {
   .process-page .film-intro.film-wrap,
   .process-page .film-intro .film-intro-inner {
