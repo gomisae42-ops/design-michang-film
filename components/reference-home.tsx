@@ -58,10 +58,10 @@ export default function ReferenceHome() {
         </h2>
         <div className="home-bridge-follow">
           <p>
-            사업을 이해하고,
+            사업을 <strong className="home-bridge-emphasis">이해</strong>하고,
             <br />
-            사람을 만나고,
-            <br />그 안에 담긴 가치를 발견하는 것에서 시작합니다.
+            사람을 <strong className="home-bridge-emphasis">만나</strong>고,
+            <br />그 안에 담긴 <strong className="home-bridge-emphasis">가치를 발견</strong>하는 것에서 시작합니다.
           </p>
           <a href="#selected-project" className="home-text-link">
             그렇게 만든 이야기 <ArrowDown size={18} aria-hidden="true" />
@@ -96,7 +96,11 @@ export default function ReferenceHome() {
         <div className="home-container home-selected-info">
           <h2 id="gunpo-title">
             <span>보이지 않는 곳에서</span>
-            <strong>군포의 산업을 만드는 사람들</strong>
+            <strong>
+              <span>군포의 산업을</span>
+              <br />
+              <span className="home-selected-people">만드는 사람들</span>
+            </strong>
           </h2>
           <div>
             <p>군포산업진흥원 소공인지원센터 · 2026</p>

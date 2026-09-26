@@ -2159,6 +2159,59 @@ figcaption {
   .scope-note p { font-size: 17px; }
 }
 
+/* 2026-09 legibility standard: match the stronger editorial reference. */
+:is(.video-page, .projects-page, .process-page, .about-page) {
+  --muted-foreground: #46515b;
+}
+:is(.video-page, .projects-page, .process-page, .about-page) .film-desc,
+.video-page .film-service-detail h3,
+.video-page .film-service-detail .service-delivery > p,
+.projects-page .film-project-caption,
+.projects-page .film-project-card > p,
+.process-page .film-detail-steps p,
+.process-page .step-detail [data-slot='accordion-content'],
+.about-page .capability-row p,
+.about-page .about-statement > p,
+.about-archive p,
+.scope-note p,
+.film-final p:not(.film-kicker) {
+  font-weight: 500;
+}
+:is(.video-page, .projects-page, .process-page, .about-page) .film-caption,
+:is(.video-page, .projects-page, .process-page, .about-page) figcaption {
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: #46515b;
+}
+.process-page .step-responsibilities dt,
+.process-page .step-responsibilities dd,
+.row-number {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  :is(.video-page, .projects-page, .process-page, .about-page) .film-intro .film-desc,
+  .video-page .film-service-detail h3,
+  .video-page .film-service-detail .film-desc,
+  .video-page .service-delivery > p,
+  .projects-page .film-project-caption,
+  .projects-page .film-project-card > p,
+  .process-page .film-detail-steps p,
+  .process-page .step-detail [data-slot='accordion-content'],
+  .about-page .capability-row p,
+  .about-page .about-statement > p,
+  .about-archive p,
+  .scope-note p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  :is(.video-page, .projects-page, .process-page, .about-page) .film-caption,
+  :is(.video-page, .projects-page, .process-page, .about-page) figcaption {
+    font-size: 16px;
+  }
+}
+
 /* 2026-09 full site typography rebalance. */
 :is(.video-page, .projects-page, .process-page, .about-page) .film-kicker {
   font-size: 17px;

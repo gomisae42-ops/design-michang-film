@@ -234,7 +234,8 @@
   gap: 75px;
 }
 .home-bridge h2 {
-  font-size: clamp(40px, 4.3vw, 64px);
+  font-size: clamp(36px, 3.2vw, 50px);
+  line-height: 1.28;
 }
 .home-bridge-follow {
   width: 52%;
@@ -244,6 +245,10 @@
   font-size: clamp(24px, 2.2vw, 34px);
   line-height: 1.8;
   word-break: keep-all;
+}
+.home-bridge-emphasis {
+  color: #132c44;
+  font-weight: 750;
 }
 .home-bridge-follow a {
   margin-top: 28px;
@@ -286,13 +291,21 @@
 }
 .home-selected-info h2 span {
   display: block;
-  font-size: 0.62em;
+  font-size: calc(0.62em - 3px);
   font-weight: 400;
   margin-bottom: 12px;
 }
 .home-selected-info h2 strong {
   display: block;
   font: inherit;
+}
+.home-selected-info h2 strong > span { display: inline; }
+.home-selected-people {
+  color: color-mix(in srgb, var(--home-ink) 76%, transparent);
+  transition: color 360ms ease;
+}
+.home-selected-info:hover .home-selected-people {
+  color: #2f6fa3;
 }
 .home-selected-info p {
   font-size: 18px;
@@ -1312,4 +1325,52 @@
   .home-why-columns p,
   .home-trust p { font-size: 17px; }
   .home-timeline p { font-size: 17px; }
+}
+
+/* 2026-09 legibility standard: strong, comfortable editorial typography. */
+.home-final {
+  --home-muted: #4b5158;
+}
+.home-story-heading > p:last-child,
+.home-chapter-body > p:not(.home-eyebrow),
+.home-services-list p,
+.home-why-columns p,
+.home-trust p,
+.home-timeline p,
+.home-final-cta .home-container > p:not(.home-eyebrow) {
+  font-weight: 500;
+}
+.home-service-visual figcaption,
+.home-trust .home-note,
+.signature-gallery .signature-primary,
+.signature-gallery .signature-secondary {
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: #3f4852;
+}
+.home-services-list p,
+.home-why-columns p,
+.home-trust p,
+.home-timeline p {
+  color: #343c45;
+}
+
+@media (max-width: 767px) {
+  .home-story-heading > p:last-child,
+  .home-chapter-body > p:not(.home-eyebrow),
+  .home-services-list p,
+  .home-why-columns p,
+  .home-trust p,
+  .home-timeline p,
+  .home-final-cta .home-container > p:not(.home-eyebrow) {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+  .home-service-visual figcaption,
+  .home-trust .home-note,
+  .signature-gallery .signature-primary,
+  .signature-gallery .signature-secondary {
+    font-size: 16px;
+  }
 }
