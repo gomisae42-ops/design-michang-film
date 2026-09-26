@@ -60,13 +60,19 @@
 
 /* Tenth correction: cleaner stage navigation and clearer interactions. */
 .process-page .service-jumps {
+  --stage-nav-pad: 28px;
+  --stage-top-gap: 32px;
+  --stage-bottom-gap: 56px;
   border-block: 0 !important;
   background: #eee7f2 !important;
   box-sizing: border-box;
   width: 100vw !important;
+  margin-top: calc(-1 * var(--stage-top-gap)) !important;
+  margin-bottom: 0 !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: 0 !important;
-  padding-inline: var(--process-gutter) !important;
+  padding: calc(var(--stage-nav-pad) + var(--stage-top-gap)) var(--process-gutter)
+    calc(var(--stage-nav-pad) + var(--stage-bottom-gap)) !important;
 }
 .process-page .step-detail [data-slot='accordion-trigger'] {
   font-size: 20px !important;
@@ -113,6 +119,7 @@
 
 @media (max-width: 1023px) {
   .process-page { --process-gutter: 32px; }
+  .process-page .service-jumps { --stage-top-gap: 16px; }
   .process-page .film-intro-inner,
   .process-page > .film-wrap.film-section {
     width: calc(100% - 64px) !important;
@@ -121,6 +128,11 @@
 
 @media (max-width: 767px) {
   .process-page { --process-gutter: 20px; }
+  .process-page .service-jumps {
+    --stage-nav-pad: 20px;
+    --stage-top-gap: 8px;
+    --stage-bottom-gap: 20px;
+  }
   .process-page .film-intro-inner,
   .process-page > .film-wrap.film-section {
     width: calc(100% - 40px) !important;
