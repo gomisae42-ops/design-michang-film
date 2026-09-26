@@ -15,6 +15,22 @@
 }
 
 /* Case-study hero: readable, useful and connected to the client introduction. */
+.case-hero {
+  background-color: #1d2430 !important;
+  background-image: url('/media/home-gunpo/story-city.webp') !important;
+  background-size: cover !important;
+  background-position: center 48% !important;
+  min-height: min(720px, calc(100svh - 80px)) !important;
+  align-items: center !important;
+}
+.case-hero::after {
+  background:
+    linear-gradient(90deg, rgba(20, 24, 32, .86) 0%, rgba(36, 32, 27, .66) 46%, rgba(78, 61, 34, .36) 100%),
+    linear-gradient(0deg, rgba(24, 20, 16, .3), rgba(24, 20, 16, .12)) !important;
+}
+.case-hero-copy {
+  padding-block: clamp(104px, 14vh, 156px) !important;
+}
 .case-hero-copy,
 .case-hero-copy h1,
 .case-hero-copy p,
@@ -87,12 +103,22 @@
 .film-final h2 { font-size: clamp(36px, calc(3.3vw + 4px), 52px) !important; }
 
 /* Tenth correction: archive wording and readable statement scale. */
+.about-page .film-intro h1 {
+  font-size: clamp(46px, 4.7vw, 68px) !important;
+}
+.about-page .about-partner-line,
+.about-page .film-intro .film-desc {
+  white-space: nowrap;
+}
+.about-page .film-intro .film-desc {
+  max-width: none !important;
+}
 .about-archive h3 {
-  font-size: clamp(44px, 4.6vw, 68px) !important;
+  font-size: clamp(41px, calc(4.6vw - 3px), 65px) !important;
   line-height: 1.28 !important;
 }
 .about-archive p {
-  font-size: 36px !important;
+  font-size: 34px !important;
   line-height: 1.65 !important;
   max-width: 980px;
 }
@@ -116,6 +142,18 @@ main:has(.film-contact-layout) > .film-intro {
 }
 
 @media (max-width: 767px) {
+  .case-hero {
+    min-height: calc(100svh - 68px) !important;
+    background-position: 56% center !important;
+  }
+  .case-hero::after {
+    background: linear-gradient(0deg, rgba(13, 18, 24, .94) 0%, rgba(26, 30, 34, .7) 65%, rgba(36, 31, 25, .5) 100%) !important;
+  }
+  .case-hero-copy { padding-block: 100px 80px !important; }
+  .about-page .about-partner-line,
+  .about-page .film-intro .film-desc {
+    white-space: normal;
+  }
   .process-page .film-intro.film-wrap,
   .process-page .film-intro .film-intro-inner {
     width: calc(100% - 40px) !important;

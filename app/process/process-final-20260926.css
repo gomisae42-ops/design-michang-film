@@ -62,12 +62,23 @@
 .process-page .service-jumps {
   border-block: 0 !important;
   background: #eee7f2 !important;
-  padding-inline: 24px !important;
+  box-sizing: border-box;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: 0 !important;
+  padding-inline: var(--process-gutter) !important;
 }
 .process-page .step-detail [data-slot='accordion-trigger'] {
   font-size: 20px !important;
   text-decoration: none !important;
+  flex: 0 0 auto !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: auto !important;
   transition: color .25s ease;
+}
+.process-page .step-detail [data-slot='accordion-trigger-icon'] {
+  margin-left: 0 !important;
 }
 .process-page .step-detail [data-slot='accordion-trigger']:hover,
 .process-page .step-detail [data-slot='accordion-trigger']:focus-visible {

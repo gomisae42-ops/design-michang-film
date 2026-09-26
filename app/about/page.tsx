@@ -16,9 +16,7 @@ export default function Page() {
           <>
             <span className="title-line title-line-strong">사업의 이야기를,</span>
             <br />
-            <span className="title-line title-line-middle">여러 매체로</span>
-            <br />
-            <span className="title-line title-line-soft about-partner-line">완성하는 제작 파트너.</span>
+            <span className="title-line title-line-soft about-partner-line">여러 매체로 완성하는 제작 파트너</span>
           </>
         }
         desc="디자인·인쇄·콘텐츠, 그리고 영상. 전하고 싶은 이야기가 필요한 곳에 제대로 닿도록 만듭니다."

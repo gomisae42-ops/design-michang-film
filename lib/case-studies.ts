@@ -20,7 +20,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       '군포산업진흥원 소공인지원센터와 함께한 소공인 다큐멘터리 프로젝트입니다. 사람의 이야기 속에서 지역의 기술과 산업이 지닌 가치를 바라봅니다.',
     facts: [
       { label: '클라이언트', value: '군포산업진흥원 소공인지원센터' },
-      { label: '프로젝트 유형', value: '소공인 다큐멘터리' },
+      { label: '프로젝트 유형', value: '소공인과 소공인지원센터의 활동영상' },
       { label: '프로젝트', value: '군포 소공인 다큐멘터리' },
       { label: '제작연도', value: '2026' },
       { label: '러닝타임', value: null },
