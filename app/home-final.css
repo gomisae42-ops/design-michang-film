@@ -237,6 +237,13 @@
   font-size: clamp(36px, 3.2vw, 50px);
   line-height: 1.28;
 }
+.home-bridge-title-second {
+  color: color-mix(in srgb, currentColor 80%, transparent);
+  transition: color .28s ease;
+}
+.home-bridge h2:hover .home-bridge-title-second {
+  color: #d45b87;
+}
 .home-bridge-follow {
   width: 52%;
   margin-left: auto;
@@ -249,7 +256,41 @@
 .home-bridge-emphasis {
   color: #132c44;
   font-weight: 750;
+  transition: color .24s ease;
+  cursor: default;
 }
+.home-bridge-understand:hover {
+  color: transparent;
+  background: linear-gradient(
+    110deg,
+    #208f8b 0%,
+    #69cfa7 22%,
+    #f0a7bd 45%,
+    #8c72c7 66%,
+    #b9dc75 82%,
+    #2a9f98 100%
+  );
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 14px rgb(99 201 174 / 22%);
+  animation: home-opal-shimmer 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes home-opal-shimmer {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-bridge-understand:hover {
+    animation: none;
+    background-position: 45% 50%;
+  }
+}
+.home-bridge-meet:hover { color: #c83b43; }
+.home-bridge-discover:hover { color: #7651a6; }
 .home-bridge-follow a {
   margin-top: 28px;
 }
@@ -1400,3 +1441,4 @@
     font-size: 16px;
   }
 }
+.home-preview{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px);align-items:center;padding-block:48px 72px}.home-preview h3{font-size:clamp(22px,2.4vw,34px);line-height:1.45}.home-preview p:not(.home-eyebrow){margin-top:14px;color:#666}.home-preview video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#18212a}.home-preview .home-eyebrow{margin-bottom:12px}@media(max-width:767px){.home-preview{grid-template-columns:1fr;padding-block:36px 56px}}

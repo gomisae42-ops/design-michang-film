@@ -1772,3 +1772,4 @@ figcaption {
 .film-footer-bottom a:hover {
   color: var(--michang-red);
 }
+.case-preview{margin:38px 0 58px}.case-preview video{display:block;width:100%;max-height:650px;aspect-ratio:16/9;object-fit:contain;background:#18212a}.case-preview figcaption{margin-top:10px;color:#6b6b6b;font-size:14px}

@@ -30,7 +30,8 @@ export default function Page() {
         <nav className="service-jumps" aria-label="제작 단계">
           {processStages.map((s, i) => (
             <a key={s.id} href={`#${s.id}`}>
-              0{i + 1} {s.title}
+              <span className="stage-number">0{i + 1}</span>
+              <span className="stage-label">{s.title}</span>
             </a>
           ))}
         </nav>

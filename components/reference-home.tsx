@@ -53,15 +53,16 @@ export default function ReferenceHome() {
         aria-labelledby="bridge-title"
       >
         <h2 id="bridge-title">
-          영상은 촬영에서
-          <br className="home-desktop-break" /> 시작되지 않습니다.
+          <span>영상은 촬영에서</span>
+          <br className="home-desktop-break" />
+          <span className="home-bridge-title-second">시작되지 않습니다.</span>
         </h2>
         <div className="home-bridge-follow">
           <p>
-            사업을 <strong className="home-bridge-emphasis">이해</strong>하고,
+            사업을 <strong className="home-bridge-emphasis home-bridge-understand">이해</strong>하고,
             <br />
-            사람을 <strong className="home-bridge-emphasis">만나</strong>고,
-            <br />그 안에 담긴 <strong className="home-bridge-emphasis">가치를 발견</strong>하는 것에서 시작합니다.
+            사람을 <strong className="home-bridge-emphasis home-bridge-meet">만나</strong>고,
+            <br />그 안에 담긴 <strong className="home-bridge-emphasis home-bridge-discover">가치를 발견</strong>하는 것에서 시작합니다.
           </p>
           <a href="#selected-project" className="home-text-link">
             그렇게 만든 이야기 <ArrowDown size={18} aria-hidden="true" />
@@ -107,6 +108,17 @@ export default function ReferenceHome() {
               프로젝트 자세히 보기 <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
+        </div>
+        <div className="home-container home-preview">
+          <div>
+            <p className="home-eyebrow">실제 촬영 영상</p>
+            <h3>군포 소공인 다큐멘터리 · 장면 미리보기</h3>
+            <p>작업 현장의 손과 공구, 기계의 움직임을 짧게 담았습니다.</p>
+          </div>
+          <video controls playsInline preload="none" poster="/media/home-gunpo/hero-film-poster-desktop.webp" aria-label="군포 소공인 다큐멘터리 촬영 장면 미리보기">
+            <source src="/media/home-gunpo/hero-film-desktop.mp4" type="video/mp4" />
+            브라우저가 영상 재생을 지원하지 않습니다.
+          </video>
         </div>
       </section>
       <section

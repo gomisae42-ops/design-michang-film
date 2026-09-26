@@ -17,6 +17,9 @@
 }
 
 .process-page > .film-wrap.film-section { overflow: visible; }
+.process-page > .film-wrap.film-section:not(.process-scope-section) {
+  padding-bottom: 0 !important;
+}
 
 .process-page .film-detail-steps > li,
 .process-page .film-detail-steps > li:hover,
@@ -47,10 +50,9 @@
   font-size: clamp(36px, calc(3vw + 4px), 50px) !important;
 }
 .process-page .process-scope-section .scope-note h2 {
-  font-size: 32px !important;
-  line-height: 1.5 !important;
+  font-size: clamp(41px, calc(3.8vw + 5px), 60px) !important;
+  line-height: 1.25 !important;
 }
-.process-page .service-jumps a,
 .process-page .film-detail-steps p,
 .process-page .step-detail [data-slot='accordion-content'],
 .process-page .process-scope-section .scope-note p,
@@ -62,6 +64,38 @@
 .process-page .step-responsibilities dd { font-size: 23px !important; }
 .process-page .film-text-link { font-size: 19px !important; }
 
+/* The eight stages work as a visual index, not a line of small menu text. */
+.process-page .service-jumps a {
+  display: flex !important;
+  min-width: 0;
+  min-height: 104px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 4px;
+  color: #2b2930;
+  text-decoration: none;
+}
+.process-page .service-jumps .stage-number {
+  font-size: clamp(46px, 4.2vw, 68px);
+  font-weight: 850;
+  line-height: .85;
+  letter-spacing: -.07em;
+  color: rgba(91, 65, 104, .22);
+  transition: color .25s ease, transform .25s ease;
+}
+.process-page .service-jumps .stage-label {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+.process-page .service-jumps a:hover .stage-number,
+.process-page .service-jumps a:focus-visible .stage-number {
+  color: rgba(115, 51, 75, .55);
+  transform: translateY(-3px);
+}
+
 /* Tenth correction: cleaner stage navigation and clearer interactions. */
 .process-page .service-jumps {
   --stage-nav-pad: 28px;
@@ -70,6 +104,9 @@
   border-block: 0 !important;
   background: #eee7f2 !important;
   box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px !important;
   width: 100vw !important;
   margin-top: calc(-1 * var(--stage-top-gap)) !important;
   margin-bottom: 0 !important;
@@ -77,6 +114,25 @@
   margin-right: 0 !important;
   padding: calc(var(--stage-nav-pad) + var(--stage-top-gap)) var(--process-gutter)
     calc(var(--stage-nav-pad) + var(--stage-bottom-gap)) !important;
+}
+
+/* Join stage 08 directly to the consultation panel. */
+.process-page .film-final {
+  margin-top: 0 !important;
+  padding-block: 96px !important;
+}
+.process-page .film-final .film-kicker {
+  font-size: 22px !important;
+}
+.process-page .film-final h2 {
+  font-size: clamp(41px, calc(3.8vw + 5px), 60px) !important;
+  line-height: 1.35 !important;
+}
+.process-page .film-final p:not(.film-kicker) {
+  font-size: 21px !important;
+}
+.process-page .film-final .film-button {
+  font-size: 18px !important;
 }
 .process-page .step-detail [data-slot='accordion-trigger'] {
   font-size: 20px !important;
@@ -129,6 +185,9 @@
   .process-page > .film-wrap.film-section {
     width: calc(100% - 64px) !important;
   }
+  .process-page .service-jumps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 767px) {
@@ -137,7 +196,12 @@
     --stage-nav-pad: 20px;
     --stage-top-gap: 8px;
     --stage-bottom-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px !important;
   }
+  .process-page .service-jumps a { min-height: 84px; }
+  .process-page .service-jumps .stage-number { font-size: 45px; }
+  .process-page .service-jumps .stage-label { font-size: 16px; }
   .process-page .film-intro-inner,
   .process-page > .film-wrap.film-section {
     width: calc(100% - 40px) !important;
@@ -146,8 +210,14 @@
     font-size: clamp(38px, calc(9.6vw + 2px), 47px) !important;
   }
   .process-page .process-scope-section .scope-note h2 {
-    font-size: 30px !important;
+    font-size: 35px !important;
+    line-height: 1.3 !important;
   }
+  .process-page .film-final { padding-block: 72px !important; }
+  .process-page .film-final .film-kicker { font-size: 20px !important; }
+  .process-page .film-final h2 { font-size: 35px !important; }
+  .process-page .film-final p:not(.film-kicker) { font-size: 18px !important; }
+  .process-page .film-final .film-button { font-size: 17px !important; }
   .process-page .film-intro .film-desc,
   .process-page .film-detail-steps p,
   .process-page .step-detail [data-slot='accordion-content'],

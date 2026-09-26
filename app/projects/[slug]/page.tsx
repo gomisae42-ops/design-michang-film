@@ -46,7 +46,7 @@ export default async function Page({
         className="case-hero"
         style={{
           minHeight: 'min(620px, calc(100svh - 80px))',
-          background: '#18212a',
+          background: 'linear-gradient(90deg, rgba(15,22,29,.88), rgba(15,22,29,.35)), url(/media/home-gunpo/story-rear.webp) center / cover',
           alignItems: 'center',
         }}
       >
@@ -74,6 +74,13 @@ export default async function Page({
             ))}
         </dl>
         <p className="case-availability">공개 승인되지 않은 세부 역할·납품 범위·성과 수치는 표시하지 않습니다.</p>
+        <figure className="case-preview">
+          <video controls playsInline preload="none" poster="/media/home-gunpo/hero-film-poster-desktop.webp" aria-label="군포 소공인 다큐멘터리 실제 촬영 장면 미리보기">
+            <source src="/media/home-gunpo/hero-film-desktop.mp4" type="video/mp4" />
+            브라우저가 영상 재생을 지원하지 않습니다.
+          </video>
+          <figcaption>실제 촬영 장면 미리보기 · 약 10초</figcaption>
+        </figure>
         <div
           className={
             items.length > 1
