@@ -14,9 +14,11 @@ export default function Page() {
         label="디자인미창"
         title={
           <>
-            사업의 이야기를,
+            <span className="title-line title-line-strong">사업의 이야기를,</span>
             <br />
-            여러 매체로 완성하는 제작 파트너.
+            <span className="title-line title-line-middle">여러 매체로</span>
+            <br />
+            <span className="title-line title-line-soft about-partner-line">완성하는 제작 파트너.</span>
           </>
         }
         desc="디자인·인쇄·콘텐츠, 그리고 영상. 전하고 싶은 이야기가 필요한 곳에 제대로 닿도록 만듭니다."
@@ -59,11 +61,10 @@ export default function Page() {
       <section className="about-archive" aria-labelledby="archive-title">
         <div className="film-wrap about-archive-grid">
           <p className="film-kicker">쌓아온 기반</p>
-          <h2 id="archive-title">1990<span>년부터</span></h2>
+          <h2 id="archive-title">1997<span>년부터</span></h2>
           <div>
             <h3>미창문화사에서 시작한<br />디자인·인쇄·출판의 경험.</h3>
             <p>한 장의 인쇄물부터 한 편의 영상까지, 사업의 목적을 이해하고 정확하게 완성하는 태도를 이어갑니다.</p>
-            <small>회사 연혁 기준이며 영상사업의 업력을 뜻하지 않습니다.</small>
           </div>
         </div>
       </section>

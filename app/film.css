@@ -249,6 +249,9 @@ figcaption {
 .film-intro {
   padding-block: 108px 72px;
 }
+.film-intro-inner {
+  position: relative;
+}
 .film-intro h1 {
   font-size: clamp(42px, 4.4vw, 64px);
   line-height: 1.3;
@@ -1961,4 +1964,154 @@ figcaption {
   .case-document .case-section-copy { display: block; }
   .case-document .case-section-copy h2 { font-size: clamp(34px, 10vw, 44px); }
   .case-document .case-section-copy > p:last-child { margin-top: 26px; font-size: 16px; }
+}
+
+/* 2026-09 editorial refinement: calmer type hierarchy, full-bleed color fields. */
+.title-line { transition: color .3s ease; }
+.title-line-strong { color: currentColor; }
+.title-line-middle { color: color-mix(in srgb, currentColor 80%, transparent); }
+.title-line-soft { color: color-mix(in srgb, currentColor 64%, transparent); }
+.video-page .film-intro:hover .title-line-soft { color: var(--human-coral); }
+.projects-page .project-people { color: color-mix(in srgb, currentColor 80%, transparent); }
+.projects-page .film-intro { background: #c7e1de; }
+.process-page .film-intro:hover .title-line-middle { color: var(--human-coral); }
+.process-page .title-line-complete { color: var(--ink-navy); }
+.about-page .film-intro:hover .about-partner-line { color: var(--ink-navy); }
+
+.video-page .film-intro h1,
+.projects-page .film-intro h1,
+.process-page .film-intro h1,
+.about-page .film-intro h1 {
+  font-size: clamp(46px, 5.2vw, 76px);
+  line-height: 1.13;
+}
+.film-intro .film-desc {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.75;
+  max-width: 780px;
+}
+
+.video-page > .film-wrap.film-section,
+.process-page > .film-wrap.film-section {
+  width: 100%;
+  max-width: none;
+  padding-inline: max(64px, calc((100vw - 1312px) / 2));
+  background: var(--paper-ivory);
+}
+.video-page .service-jumps,
+.process-page .service-jumps { justify-content: center; }
+
+.video-page .service-jumps a { font-size: 17px; }
+.video-page .film-service-detail {
+  grid-template-columns: 54px minmax(0, 1fr) minmax(320px, .88fr);
+  gap: clamp(32px, 4vw, 72px);
+  align-items: stretch;
+}
+.video-page .film-service-detail:hover,
+.video-page .film-service-detail:focus-within {
+  margin-inline: 0;
+  padding-inline: 0;
+  background: transparent;
+  color: inherit;
+}
+.video-page .film-service-detail h2 { font-size: clamp(32px, 3.25vw, 50px); }
+.video-page .film-service-detail h3 {
+  font-size: clamp(18px, 1.45vw, 21px);
+  line-height: 1.65;
+}
+.video-page .film-service-detail .film-desc,
+.video-page .film-service-detail .service-delivery > p { font-size: 18px; }
+.service-copy {
+  display: flex;
+  flex-direction: column;
+}
+.video-page .service-delivery {
+  border-left: 0;
+  border-top: 1px solid var(--steel-silver);
+  margin-top: 32px;
+  padding: 26px 0 0;
+}
+.service-image {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background: #ddd8cd;
+}
+.service-image img {
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.film-service-detail:hover .service-image img,
+.film-service-detail:focus-within .service-image img { transform: scale(1.035); }
+
+.projects-page .film-section { padding-top: 92px; }
+.projects-page .film-project-caption,
+.projects-page .film-project-card > p { font-size: 16px; }
+.process-page .film-detail-steps p,
+.process-page .step-responsibilities dd,
+.process-page .step-detail [data-slot='accordion-content'],
+.about-page .capability-row p,
+.scope-note p { font-size: 18px; }
+.process-page .film-detail-steps > li {
+  grid-template-columns: 54px minmax(0, 1.25fr) minmax(280px, .9fr);
+}
+
+.about-page .about-statement {
+  background: #ead9e5;
+  color: var(--film-black);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-inline: max(64px, calc((100vw - 1312px) / 2));
+}
+.about-page .about-statement > p:last-child {
+  color: color-mix(in srgb, var(--film-black) 72%, transparent);
+}
+.case-document {
+  width: 100%;
+  max-width: none;
+  padding-inline: max(64px, calc((100vw - 1312px) / 2));
+}
+
+@media (max-width: 1023px) {
+  .video-page > .film-wrap.film-section,
+  .process-page > .film-wrap.film-section { padding-inline: 32px; }
+  .case-document,
+  .about-page .about-statement { padding-inline: 32px; }
+  .video-page .film-service-detail {
+    grid-template-columns: 40px 1fr;
+  }
+  .video-page .service-image {
+    grid-column: 2;
+    min-height: 320px;
+  }
+  .process-page .film-detail-steps > li {
+    grid-template-columns: 40px 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-page .film-intro h1,
+  .projects-page .film-intro h1,
+  .process-page .film-intro h1,
+  .about-page .film-intro h1 {
+    font-size: clamp(38px, 10.5vw, 48px);
+  }
+  .film-intro .film-desc { font-size: 17px; }
+  .video-page > .film-wrap.film-section,
+  .process-page > .film-wrap.film-section { padding-inline: 20px; }
+  .case-document,
+  .about-page .about-statement { padding-inline: 20px; }
+  .video-page .film-service-detail { grid-template-columns: 1fr; }
+  .video-page .service-image {
+    grid-column: auto;
+    min-height: 250px;
+    order: 3;
+  }
+  .video-page .film-service-detail h3,
+  .video-page .film-service-detail .film-desc,
+  .video-page .film-service-detail .service-delivery > p,
+  .process-page .film-detail-steps p,
+  .process-page .step-responsibilities dd,
+  .about-page .capability-row p,
+  .scope-note p { font-size: 17px; }
 }

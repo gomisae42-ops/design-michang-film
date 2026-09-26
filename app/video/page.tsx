@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { FilmIntro, FinalCTA } from '@/components/film';
 import { filmMetadata, videoServices } from '@/lib/film-content';
@@ -13,9 +14,9 @@ export default function Page() {
         label="영상제작"
         title={
           <>
-            전하고 싶은 목적에 맞춰,
+            <span className="title-line title-line-strong">전하고 싶은 목적에 맞춰,</span>
             <br />
-            영상의 형식을 설계합니다.
+            <span className="title-line title-line-soft">영상의 형식을 설계합니다.</span>
           </>
         }
         desc="누가 보고, 무엇을 느끼며, 어디에서 활용할지. 목적에서 출발해 필요한 영상을 함께 정리합니다."
@@ -31,17 +32,16 @@ export default function Page() {
         {videoServices.map((s, i) => (
           <section className="film-service-detail" id={s.id} key={s.id}>
             <span className="row-number">{String(i + 1).padStart(2, '0')}</span>
-            <div>
+            <div className="service-copy">
               <h2>{s.name}</h2>
               <h3>{s.audience}</h3>
               <p className="film-desc" style={{ marginTop: 24 }}>
                 {s.detail}
               </p>
-            </div>
-            <div className="service-delivery">
-              <span className="film-caption">이런 결과물을 함께 만듭니다</span>
-              <p>{s.output}</p>
-              <div className="film-links">
+              <div className="service-delivery">
+                <span className="film-caption">이런 결과물을 함께 만듭니다</span>
+                <p>{s.output}</p>
+                <div className="film-links">
                 <Link
                   href={`/contact/?service=${s.id}&source=video`}
                   className="film-text-link"
@@ -55,7 +55,11 @@ export default function Page() {
                     <ArrowRight size={18} aria-hidden="true" />
                   </Link>
                 )}
+                </div>
               </div>
+            </div>
+            <div className="service-image" aria-hidden="true">
+              <Image src={s.image} alt="" fill sizes="(max-width: 767px) 100vw, 42vw" />
             </div>
           </section>
         ))}

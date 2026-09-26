@@ -27,6 +27,7 @@ export const videoServices = [
       '일하는 사람의 목소리와 현장의 장면으로 사업의 의미를 전합니다. 사전 취재와 인터뷰를 중심으로 이야기를 구성합니다.',
     output: '인물·지역·산업 다큐멘터리',
     photo: 'video',
+    image: '/media/home-gunpo/story-tools.webp',
   },
   {
     id: 'public',
@@ -37,6 +38,7 @@ export const videoServices = [
       '정책 용어를 쉽게 풀고, 서비스를 이용하는 사람의 시선에서 기관의 역할과 변화를 보여줍니다.',
     output: '기관 소개·공공서비스 안내 영상',
     photo: 'website',
+    image: '/media/home-gunpo/story-city.webp',
   },
   {
     id: 'corporate',
@@ -47,6 +49,7 @@ export const videoServices = [
       '제품의 기능뿐 아니라 기술을 만드는 과정과 사람을 함께 담아 기업의 차별점을 전달합니다.',
     output: '기업·기술·제품 소개 영상',
     photo: 'hero',
+    image: '/media/home-gunpo/story-machine.webp',
   },
   {
     id: 'results',
@@ -57,6 +60,7 @@ export const videoServices = [
       '사업 자료와 현장 사례를 연결해 무엇이 달라졌는지 보여줍니다. 수치의 출처와 표현을 함께 검수합니다.',
     output: '사업성과·성과공유회 영상',
     photo: 'editorial',
+    image: '/media/home-gunpo/story-rear.webp',
   },
   {
     id: 'policy',
@@ -67,6 +71,7 @@ export const videoServices = [
       '지원 대상, 신청 방법, 기대 효과를 명확하게 정리합니다. 실제 참여 사례를 활용할 경우 공개 범위를 먼저 확인합니다.',
     output: '지원사업 안내·참여 사례 영상',
     photo: 'catalog',
+    image: '/media/home-gunpo/story-city.webp',
   },
   {
     id: 'interview',
@@ -77,6 +82,7 @@ export const videoServices = [
       '사전 대화로 질문을 설계하고 편안한 촬영 환경을 만듭니다. 말의 맥락을 지키며 핵심 메시지를 편집합니다.',
     output: '인물 인터뷰·참여자 스토리',
     photo: 'about',
+    image: '/media/home-gunpo/story-tools.webp',
   },
   {
     id: 'event',
@@ -87,6 +93,7 @@ export const videoServices = [
       '행사 흐름과 주요 순간을 사전에 파악하고 촬영 동선을 준비합니다. 기록본과 하이라이트의 목적을 구분합니다.',
     output: '행사 기록·하이라이트 영상',
     photo: 'video',
+    image: '/media/home-gunpo/story-rear.webp',
   },
   {
     id: 'shortform',
@@ -97,6 +104,7 @@ export const videoServices = [
       '채널과 시청 상황에 맞춰 짧은 이야기로 재구성합니다. 세로 화면, 자막 가독성, 첫 장면의 메시지를 함께 설계합니다.',
     output: '세로형 숏폼·SNS 편집본',
     photo: 'work-video',
+    image: '/media/home-gunpo/story-machine.webp',
   },
 ];
 export const homeServices = [

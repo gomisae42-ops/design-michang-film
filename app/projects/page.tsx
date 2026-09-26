@@ -11,7 +11,7 @@ export default function Page() {
         label="프로젝트"
         title={
           <>
-            사업의 목적을,
+            <span className="title-line title-line-strong">사업의 목적을,</span>
             <br />
             <span
               className="project-people"

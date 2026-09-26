@@ -15,9 +15,11 @@ export default function Page() {
         label="제작과정"
         title={
           <>
-            좋은 영상은,
+            <span className="title-line title-line-strong">좋은 영상은,</span>
             <br />
-            함께 확인하는 과정에서 완성됩니다.
+            <span className="title-line title-line-middle">함께 확인하는 과정에서</span>{' '}
+            <span className="title-line title-line-complete">완성</span>
+            <span className="title-line title-line-soft">됩니다.</span>
           </>
         }
         desc="처음 영상을 준비하는 담당자도 흐름을 이해할 수 있도록. 우리가 하는 일과 함께 확인할 자료를 단계마다 안내합니다."
