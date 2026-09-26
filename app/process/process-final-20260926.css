@@ -46,6 +46,10 @@
 .process-page .film-detail-steps h2 {
   font-size: clamp(36px, calc(3vw + 4px), 50px) !important;
 }
+.process-page .process-scope-section .scope-note h2 {
+  font-size: 32px !important;
+  line-height: 1.5 !important;
+}
 .process-page .service-jumps a,
 .process-page .film-detail-steps p,
 .process-page .step-detail [data-slot='accordion-content'],
@@ -108,6 +112,7 @@
 }
 .process-page .film-final-title-second {
   color: color-mix(in srgb, currentColor 80%, transparent) !important;
+  transition: color .25s ease;
 }
 .process-page .film-final h2:hover .film-final-title-second {
   color: #667d9b !important;
@@ -139,6 +144,9 @@
   }
   .process-page .film-intro h1 {
     font-size: clamp(38px, calc(9.6vw + 2px), 47px) !important;
+  }
+  .process-page .process-scope-section .scope-note h2 {
+    font-size: 30px !important;
   }
   .process-page .film-intro .film-desc,
   .process-page .film-detail-steps p,
