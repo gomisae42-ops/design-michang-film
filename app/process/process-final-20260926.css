@@ -7,7 +7,7 @@
 .process-page .film-intro {
   width: 100% !important;
   margin-left: 0 !important;
-  background: #f3e2d2 !important;
+  background: #e2eee8 !important;
 }
 
 .process-page .film-intro-inner,
@@ -199,7 +199,7 @@
     color: #d77a94 !important;
   }
   .process-page .film-final-title-second:hover {
-    color: #1428a0 !important;
+    color: #c83b43 !important;
   }
 }
 

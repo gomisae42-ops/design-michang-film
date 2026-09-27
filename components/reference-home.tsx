@@ -286,9 +286,6 @@ export default function ReferenceHome() {
               <br />
               이제 영상으로 사람과 사업을 연결합니다.
             </p>
-            <p className="home-note">
-              회사 연혁 기준이며, 영상사업의 업력을 뜻하지 않습니다.
-            </p>
             <Link href="/about/" className="home-text-link">
               디자인미창 알아보기 <ArrowRight size={18} aria-hidden="true" />
             </Link>

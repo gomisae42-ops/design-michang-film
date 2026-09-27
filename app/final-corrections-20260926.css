@@ -161,8 +161,8 @@ main:has(.film-contact-layout) > .film-intro {
   position: relative;
   overflow: hidden;
   padding-block: clamp(88px, 9vw, 128px);
-  background: #1428a0;
-  color: #fff;
+  background: #4dffcc;
+  color: #12283f;
 }
 
 /* 2026-09-27 third revision: interactions limited to the requested About elements. */
@@ -188,7 +188,7 @@ main:has(.film-contact-layout) > .film-intro {
 }
 .about-page .brand-archive-kicker {
   margin: 0 0 30px !important;
-  color: #e07a52;
+  color: #b84f35;
   font-size: clamp(16px, 1.35vw, 18px) !important;
   font-weight: 700 !important;
   letter-spacing: .04em;
@@ -197,7 +197,7 @@ main:has(.film-contact-layout) > .film-intro {
   position: relative;
   z-index: 1;
   margin: 0;
-  color: #fff;
+  color: #12283f;
   font-size: clamp(56px, 5vw, 76px) !important;
   font-weight: 700;
   line-height: 1.12;
@@ -205,7 +205,7 @@ main:has(.film-contact-layout) > .film-intro {
 }
 .about-page .brand-archive-line { display: block; }
 .about-page .brand-archive h2 strong {
-  color: #e07a52;
+  color: #b84f35;
   font-weight: inherit;
 }
 .about-page .brand-archive-description {
@@ -213,7 +213,7 @@ main:has(.film-contact-layout) > .film-intro {
   z-index: 1;
   max-width: 900px;
   margin: 38px 0 0 !important;
-  color: #cbd3db;
+  color: #17384a;
   font-size: clamp(20px, 1.55vw, 22px) !important;
   font-weight: 500 !important;
   line-height: 1.65 !important;
@@ -223,7 +223,7 @@ main:has(.film-contact-layout) > .film-intro {
   display: block;
 }
 .about-page .brand-archive-experience {
-  color: #fff;
+  color: #12283f;
   font-size: 1.35em;
   font-weight: 700;
   line-height: 1.35;
@@ -237,7 +237,7 @@ main:has(.film-contact-layout) > .film-intro {
   top: 50%;
   right: -1vw;
   translate: 0 -50%;
-  color: rgba(255,255,255,.08);
+  color: rgba(18,40,63,.1);
   font-size: clamp(220px, 22vw, 360px);
   font-weight: 800;
   line-height: .8;
