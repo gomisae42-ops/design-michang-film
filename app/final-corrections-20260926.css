@@ -161,7 +161,7 @@ main:has(.film-contact-layout) > .film-intro {
   position: relative;
   overflow: hidden;
   padding-block: clamp(88px, 9vw, 128px);
-  background: #4dffcc;
+  background: #a8d8d3;
   color: #12283f;
 }
 
