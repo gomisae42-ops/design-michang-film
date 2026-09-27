@@ -7,7 +7,7 @@
 .process-page .film-intro {
   width: 100% !important;
   margin-left: 0 !important;
-  background: #f7f3ec !important;
+  background: #f3e2d2 !important;
 }
 
 .process-page .film-intro-inner,
@@ -151,7 +151,7 @@
   color: #73334b !important;
 }
 .process-page .title-line-middle {
-  color: #d77a94 !important;
+  color: color-mix(in srgb, currentColor 80%, transparent) !important;
   transition: color .35s ease;
 }
 .process-page .title-line-complete,

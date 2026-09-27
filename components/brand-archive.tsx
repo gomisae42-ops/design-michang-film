@@ -47,10 +47,16 @@ export default function BrandArchive() {
           </span>
         </h2>
         <p className="brand-archive-description">
-          기획·디자인·인쇄·출판에서 영상까지.
-          <br />
-          매체는 달라도, 사업의 목적을 이해하고 정확하게 완성하는 태도는
-          변하지 않았습니다.
+          <span className="brand-archive-experience">
+            30여 년 성장해 온
+            <br />
+            디자인·인쇄·출판의 경험
+          </span>
+          <span className="brand-archive-connection">
+            여러 매체에 이야기를 담아온 기반 위에서
+            <br />
+            이제 영상으로 사람과 사업을 연결합니다.
+          </span>
         </p>
         <span className="brand-archive-watermark" aria-hidden="true">
           1997

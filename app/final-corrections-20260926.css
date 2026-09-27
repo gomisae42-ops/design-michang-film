@@ -218,6 +218,19 @@ main:has(.film-contact-layout) > .film-intro {
   font-weight: 500 !important;
   line-height: 1.65 !important;
 }
+.about-page .brand-archive-experience,
+.about-page .brand-archive-connection {
+  display: block;
+}
+.about-page .brand-archive-experience {
+  color: #fff;
+  font-size: 1.35em;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.about-page .brand-archive-connection {
+  margin-top: 24px;
+}
 .about-page .brand-archive-watermark {
   position: absolute;
   z-index: 0;
