@@ -11,6 +11,7 @@ export const metadata = filmMetadata(
 export default function Page() {
   return (
     <div className="about-page">
+      <BrandArchive />
       <FilmIntro
         label="디자인미창"
         title={
@@ -39,15 +40,24 @@ export default function Page() {
       <section className="film-wrap film-section" id="capabilities">
         <FilmHeading label="제작 역량" title="한 가지 이야기, 일관된 표현." />
         <div style={{ marginTop: 48 }}>
-          {strengths.map((s) => (
-            <div className="capability-row" key={s.title}>
-              <h3>{s.title}</h3>
-              <div>
-                <p>{s.body}</p>
-                <p style={{ marginTop: 16 }}>{s.detail}</p>
+          {strengths.map((s, i) => {
+            const keywords = ['기획', '스토리텔링', '통합 제작'];
+            const keyword = keywords[i];
+            const lead = s.title.slice(0, -keyword.length);
+
+            return (
+              <div className={`capability-row capability-row-${i + 1}`} key={s.title}>
+                <h3>
+                  {lead}
+                  <span className="capability-keyword">{keyword}</span>
+                </h3>
+                <div>
+                  <p>{s.body}</p>
+                  <p style={{ marginTop: 16 }}>{s.detail}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <Link
           href="/process/"
@@ -57,7 +67,6 @@ export default function Page() {
           함께 일하는 과정 보기 <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </section>
-      <BrandArchive />
       <section className="film-wrap film-section" id="evidence">
         <FilmHeading
           label="프로젝트"

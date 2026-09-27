@@ -151,7 +151,7 @@
   color: #73334b !important;
 }
 .process-page .title-line-middle {
-  color: color-mix(in srgb, currentColor 80%, transparent) !important;
+  color: #d77a94 !important;
   transition: color .35s ease;
 }
 .process-page .title-line-complete,
@@ -196,7 +196,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .process-page .title-line-middle:hover {
-    color: #e07a52 !important;
+    color: #d77a94 !important;
   }
   .process-page .film-final-title-second:hover {
     color: #1428a0 !important;

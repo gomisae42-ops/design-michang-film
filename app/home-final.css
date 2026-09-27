@@ -1444,8 +1444,14 @@
 .home-preview{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px);align-items:center;padding-block:48px 72px}.home-preview h3{font-size:clamp(22px,2.4vw,34px);line-height:1.45}.home-preview p:not(.home-eyebrow){margin-top:14px;color:#666}.home-preview video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#18212a}.home-preview .home-eyebrow{margin-bottom:12px}@media(max-width:767px){.home-preview{grid-template-columns:1fr;padding-block:36px 56px}}
 
 .home-preview-title-second {
-  color: #e07a52;
+  color: color-mix(in srgb, currentColor 80%, transparent);
   white-space: nowrap;
+  transition: color .35s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .home-preview-title-second:hover {
+    color: #e07a52;
+  }
 }
 
 /* 2026-09-27: representative-requested typography and keyword interactions. */
