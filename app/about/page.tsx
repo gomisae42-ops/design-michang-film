@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { FilmIntro, FilmHeading, FinalCTA } from '@/components/film';
 import { filmMetadata } from '@/lib/film-content';
 import { strengths } from '@/lib/film-design';
+import BrandArchive from '@/components/brand-archive';
 export const metadata = filmMetadata(
   '디자인미창',
   '디자인·인쇄·콘텐츠·영상 제작회사 디자인미창. 사업을 이해하는 기획과 사람 중심의 이야기, 통합 제작 역량을 소개합니다.',
@@ -56,20 +57,7 @@ export default function Page() {
           함께 일하는 과정 보기 <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </section>
-      <section className="about-archive" aria-labelledby="archive-title">
-        <div className="film-wrap about-archive-grid">
-          <p className="film-kicker">쌓아온 기반</p>
-          <h2 id="archive-title">1997<span>년부터</span></h2>
-          <div>
-            <h3>
-              <span>30여 년을 성장해 온</span>
-              <br />
-              <span className="about-archive-title-second">디자인 인쇄 출판의 경험.</span>
-            </h3>
-            <p>한 장의 인쇄물부터 한 편의 영상까지, 사업의 목적을 이해하고 정확하게 완성하는 태도를 이어갑니다.</p>
-          </div>
-        </div>
-      </section>
+      <BrandArchive />
       <section className="film-wrap film-section" id="evidence">
         <FilmHeading
           label="프로젝트"

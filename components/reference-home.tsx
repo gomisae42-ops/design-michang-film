@@ -121,7 +121,11 @@ export default function ReferenceHome() {
         <div className="home-container home-preview">
           <div>
             <p className="home-eyebrow">실제 촬영 영상</p>
-            <h3>군포 소공인 다큐멘터리 · 장면 미리보기</h3>
+            <h3>
+              <span>군포 소공인 다큐멘터리</span>
+              <br />
+              <span className="home-preview-title-second">장면 미리보기</span>
+            </h3>
             <p>작업 현장의 손과 공구, 기계의 움직임을 짧게 담았습니다.</p>
           </div>
           <video controls playsInline preload="none" poster="/media/home-gunpo/hero-film-poster-desktop.webp" aria-label="군포 소공인 다큐멘터리 촬영 장면 미리보기">

@@ -685,6 +685,16 @@ figcaption {
   font-size: 18px;
   margin-top: 14px;
 }
+.video-page .service-image {
+  position: relative;
+  align-self: start;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e7e7e3;
+}
+.video-page .service-image img {
+  object-fit: cover;
+}
 .film-links {
   display: flex;
   gap: 20px;

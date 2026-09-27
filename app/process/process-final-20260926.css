@@ -152,10 +152,7 @@
 }
 .process-page .title-line-middle {
   color: color-mix(in srgb, currentColor 80%, transparent) !important;
-  transition: color .25s ease;
-}
-.process-page .film-intro h1:hover .title-line-middle {
-  color: #55bfe5 !important;
+  transition: color .35s ease;
 }
 .process-page .title-line-complete,
 .process-page .title-line-soft {
@@ -168,10 +165,7 @@
 }
 .process-page .film-final-title-second {
   color: color-mix(in srgb, currentColor 80%, transparent) !important;
-  transition: color .25s ease;
-}
-.process-page .film-final h2:hover .film-final-title-second {
-  color: #55bfe5 !important;
+  transition: color .35s ease;
 }
 .process-page .process-scope-section .scope-title-second {
   color: color-mix(in srgb, currentColor 80%, transparent);
@@ -198,6 +192,15 @@
 .process-page .preparation-list {
   list-style-type: disc;
   padding-left: 1.35em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .process-page .title-line-middle:hover {
+    color: #e07a52 !important;
+  }
+  .process-page .film-final-title-second:hover {
+    color: #1428a0 !important;
+  }
 }
 
 @media (max-width: 1023px) {
